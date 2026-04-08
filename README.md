@@ -1,5 +1,5 @@
-[index.html](https://github.com/user-attachments/files/26555856/index.html)
-[Uploadi<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -547,4 +547,4 @@ document.addEventListener("mousemove",function(e){
 render();
 </script>
 </body>
-</html>ng index.html…]()
+</html>
