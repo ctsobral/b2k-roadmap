@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -118,6 +117,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
   <button class="qb"     data-q="Q3 2026" onclick="selQ(this)">Q3/26 <span style="font-size:9px;color:var(--muted)">Jul&ndash;Set</span> <span class="qcnt" style="background:rgba(245,158,11,.15);color:#F59E0B">11</span></button>
   <button class="qb"     data-q="Q4 2026" onclick="selQ(this)">Q4/26 <span style="font-size:9px;color:var(--muted)">Out&ndash;Dez</span> <span class="qcnt" style="background:rgba(239,68,68,.15);color:#EF4444">8</span></button>
   <button class="qb"     data-q="Backlog"  onclick="selQ(this)">&#x1F4CB; Backlog <span class="qcnt" style="background:rgba(100,116,139,.15);color:#94A3B8">9</span></button>
+  <button class="qb" style="background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.35);color:#EF4444;cursor:default;flex-shrink:0;" title="GAPs identificados no Q2/26">
+    &#x26A0; 24 GAPs
+  </button>
 </div>
 
 <div class="sbar">
