@@ -1,11 +1,10 @@
-[index.html](https://github.com/user-attachments/files/26554300/index.html)
-<!DOCTYPE html>
+[b2k-roadmap-novo.html](https://github.com/user-attachments/files/26555269/b2k-roadmap-novo.html)[Uploading b2k-roadmap-novo.h<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>B2K Roadmap BUCS-345 v1775594600418</title>
+<title>B2K Roadmap BUCS-345 v1775605373176</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -54,8 +53,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
 .leg-sw{width:20px;height:8px;border-radius:3px;}
 .gantt{display:grid;grid-template-columns:295px 1fr;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--bg2);}
 .lp{border-right:1px solid var(--border);}
-.lph{height:72px;display:flex;align-items:flex-end;padding:10px 12px;border-bottom:1px solid var(--border);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);}
-.er{display:flex;align-items:flex-start;padding:8px 10px;min-height:54px;border-bottom:1px solid var(--border);gap:7px;}
+.lph{height:72px;min-height:72px;display:flex;align-items:flex-end;padding:10px 12px;border-bottom:1px solid var(--border);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);}
+.er{display:flex;align-items:flex-start;padding:8px 10px;height:64px;min-height:64px;border-bottom:1px solid var(--border);gap:7px;overflow:hidden;}
 .er:hover{background:rgba(255,255,255,.025);}
 .er-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:4px;}
 .er-key{font-size:10px;color:var(--dim);flex-shrink:0;width:82px;text-decoration:none;font-family:monospace;transition:color .15s;margin-top:1px;display:block;}
@@ -65,11 +64,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
 .er-dates{font-size:9.5px;color:#4A5170;margin-top:3px;letter-spacing:.01em;}
 .rp{overflow-x:auto;}.rp::-webkit-scrollbar{height:4px;}.rp::-webkit-scrollbar-thumb{background:var(--dim);border-radius:10px;}
 .gi{position:relative;min-width:600px;}
-.ghq{display:flex;height:36px;border-bottom:1px solid var(--border);background:var(--bg2);}
-.ghm{display:flex;height:36px;border-bottom:1px solid var(--border);background:var(--bg2);}
+.ghq{position:relative;height:36px;border-bottom:1px solid var(--border);background:var(--bg2);}
+.ghm{position:relative;height:36px;border-bottom:1px solid var(--border);background:var(--bg2);}
 .ghqc{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;border-right:1px solid var(--border);flex-shrink:0;}
 .ghmc{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-right:1px solid var(--border);flex-shrink:0;}
-.gr{position:relative;min-height:54px;border-bottom:1px solid var(--border);display:flex;align-items:center;}
+.gr{position:relative;height:64px;min-height:64px;border-bottom:1px solid var(--border);display:flex;align-items:center;}
 .gr:hover{background:rgba(255,255,255,.02);}
 .gc{height:100%;flex-shrink:0;border-right:1px solid rgba(255,255,255,.02);}
 .gbar{position:absolute;height:26px;border-radius:6px;top:50%;transform:translateY(-50%);display:flex;align-items:center;padding:0 7px;font-size:9.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;transition:all .2s;z-index:3;border:1px solid transparent;}
@@ -251,11 +250,11 @@ var ST = {
 
 // QUARTER RANGES — start/end com margem visual
 var QR = {
-  "Q1 2026":{s:"2025-11-15",e:"2026-04-20",color:"#3B82F6",period:"Jan \u2013 Mar 2026"},
-  "Q2 2026":{s:"2026-03-10",e:"2026-07-10",color:"#A855F7",period:"Abr \u2013 Mai 2026"},
+  "Q1 2026":{s:"2025-06-01",e:"2026-04-15",color:"#3B82F6",period:"Jan \u2013 Mar 2026"},
+  "Q2 2026":{s:"2025-12-15",e:"2026-07-15",color:"#A855F7",period:"Abr \u2013 Mai 2026"},
   "Q3 2026":{s:"2026-06-15",e:"2026-10-15",color:"#F59E0B",period:"Jul \u2013 Set 2026"},
-  "Q4 2026":{s:"2026-09-15",e:"2027-01-15",color:"#EF4444",period:"Out \u2013 Dez 2026"},
-  "all":    {s:"2025-06-01",e:"2027-02-01",color:"#F0F0F5",period:"Jun 2025 \u2013 Jan 2027"}
+  "Q4 2026":{s:"2026-09-01",e:"2027-01-15",color:"#EF4444",period:"Out \u2013 Dez 2026"},
+  "all":    {s:"2025-06-01",e:"2027-01-15",color:"#F0F0F5",period:"Jun 2025 \u2013 Jan 2027"}
 };
 
 // QBANDS — faixas visuais no eixo de tempo
@@ -346,8 +345,8 @@ function render(){
   }
 
   var qr = QR[AQ] || QR["all"];
-  var tlS = sd(qr.s); tlS.setDate(tlS.getDate()-5);
-  var tlE = sd(qr.e); tlE.setDate(tlE.getDate()+10);
+  var tlS = sd(qr.s);
+  var tlE = sd(qr.e);
   var TOTAL = tlE - tlS;
   var TDAYS = TOTAL / 86400000;
 
@@ -357,29 +356,36 @@ function render(){
   while(mc <= tlE){ months.push(new Date(mc)); mc.setMonth(mc.getMonth()+1); }
 
   function mw(m){
-    var ms = new Date(Math.max(+m,+tlS));
-    var me = new Date(Math.min(+new Date(m.getFullYear(),m.getMonth()+1,0), +tlE));
-    return ((me-ms)/86400000+1)/TDAYS*100;
+    var d1 = new Date(m.getFullYear(),m.getMonth(),1);
+    var d2 = new Date(m.getFullYear(),m.getMonth()+1,0);
+    var s = Math.max(+d1, +tlS);
+    var e = Math.min(+d2, +tlE);
+    return Math.max(0, (e - s) / TOTAL * 100);
   }
 
   var todayP = pct(todayStr(), tlS, TOTAL);
 
   // Header quarters
-  var qCells = QBANDS.map(function(qb){
+  var qCells = "<div style=\"position:relative;height:36px;border-bottom:1px solid var(--border);background:var(--bg2);\">"+QBANDS.map(function(qb){
     var qs=sd(qb.s), qe=sd(qb.e);
-    if(qe<tlS||qs>tlE) return "";
+    if(+qe<+tlS||+qs>+tlE) return "";
     var l=Math.max(0,(+qs-+tlS)/TOTAL*100);
     var r=Math.min(100,(+qe-+tlS)/TOTAL*100);
     var w=(r-l).toFixed(2);
     if(w<=0) return "";
-    return "<div class=\"ghqc\" style=\"width:"+w+"%;"+qb.c+"\">"+qb.l+"</div>";
-  }).join("");
+    return "<div class=\"ghqc\" style=\"position:absolute;left:"+l.toFixed(2)+"%;width:"+w+"%;height:100%;"+qb.c+"\">"+qb.l+"</div>";
+  }).join("")+"</div>";;
 
   // Header meses
-  var mCells = months.map(function(m){
-    var lbl = m.toLocaleDateString("pt-BR",{month:"short",year:"2-digit"}).toUpperCase();
-    return "<div class=\"ghmc\" style=\"width:"+mw(m).toFixed(2)+"%\">"+lbl+"</div>";
-  }).join("");
+  var mCells = "<div style=\"position:relative;height:36px;border-bottom:1px solid var(--border);background:var(--bg2);\">" +
+    months.map(function(m){
+      var d1 = new Date(m.getFullYear(),m.getMonth(),1);
+      var lp = pct(d1.getFullYear()+"-"+String(d1.getMonth()+1).padStart(2,"0")+"-01", tlS, TOTAL);
+      var wp = mw(m);
+      var lbl = m.toLocaleDateString("pt-BR",{month:"short",year:"2-digit"}).toUpperCase();
+      return "<div style=\"position:absolute;left:"+lp.toFixed(2)+"%;width:"+wp.toFixed(2)+"%;height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-right:1px solid var(--border);\">"+lbl+"</div>";
+    }).join("") +
+    "</div>";
 
   var lRows = [], rRows = [];
 
@@ -406,7 +412,10 @@ function render(){
 
     // Barra gantt
     var bgCols = months.map(function(m){
-      return "<div class=\"gc\" style=\"width:"+mw(m).toFixed(2)+"%\"></div>";
+      var d1 = new Date(m.getFullYear(),m.getMonth(),1);
+      var lp = pct(d1.getFullYear()+"-"+String(d1.getMonth()+1).padStart(2,"0")+"-01", tlS, TOTAL);
+      var wp = mw(m);
+      return "<div class=\"gc\" style=\"position:absolute;left:"+lp.toFixed(2)+"%;width:"+wp.toFixed(2)+"%\"></div>";
     }).join("");
 
     var todayLine = (todayP!==null&&todayP>=0&&todayP<=100)
@@ -434,7 +443,7 @@ function render(){
     }
 
     rRows.push(
-      "<div class=\"gr\">"+bgCols+todayLine+bar+"</div>"
+      "<div class=\"gr\">"+bgCols+bar+"</div>"
     );
   });
 
@@ -445,9 +454,10 @@ function render(){
         lRows.join("") +
       "</div>" +
       "<div class=\"rp\" id=\"rp\">" +
-        "<div class=\"gi\">" +
-          "<div class=\"ghq\">"+qCells+"</div>" +
-          "<div class=\"ghm\">"+mCells+"</div>" +
+        "<div class=\"gi\" style=\"position:relative\">" +
+          qCells +
+          mCells +
+          (todayP!==null&&todayP>=0&&todayP<=100?"<div class=\"today-global\" style=\"position:absolute;top:72px;bottom:0;left:"+todayP.toFixed(2)+"%;width:1px;border-left:2px dashed rgba(255,255,255,.25);z-index:20;pointer-events:none;\"><div style=\"position:absolute;top:0;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.1);color:rgba(255,255,255,.5);font-size:7.5px;font-weight:700;padding:2px 4px;border-radius:3px;white-space:nowrap;\">Hoje</div></div>":"") +
           rRows.join("") +
         "</div>" +
       "</div>" +
@@ -532,4 +542,4 @@ document.addEventListener("mousemove",function(e){
 render();
 </script>
 </body>
-</html>
+</html>tml…]()
