@@ -1,12 +1,11 @@
-
-[b2k-roadmap-novo.html](https://github.com/user-attachments/files/26555423/b2k-roadmap-novo.html)
-<!DOCTYPE html>
+[index.html](https://github.com/user-attachments/files/26555856/index.html)
+[Uploadi<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>B2K Roadmap BUCS-345 v1775605373176</title>
+<title>B2K Roadmap BUCS-345 v2026-04-08</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -109,24 +108,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
   <button class="sf sf-pri"   data-s="prioritized" onclick="togS(this)">&#x23ED; Priorizado</button>
   <button class="sf sf-disc"  data-s="discovery"   onclick="togS(this)">&#x1F50D; Discovery</button>
   <button class="sf sf-wish"  data-s="wishlist"    onclick="togS(this)">&#x1F4CB; Wishlist</button>
-  <div class="nright">Progresso: <b>33%</b> &middot; 23/70</div>
+  <div class="nright">Progresso: <b style="color:#21C25E">32%</b> &middot; 23/72</div>
 </nav>
 
 <div class="qbar">
-  <button class="qb sel" data-q="all"     onclick="selQ(this)">&#x1F5FA; Todos <span class="qcnt" style="background:rgba(255,255,255,.08);color:var(--text)">70</span></button>
+  <button class="qb sel" data-q="all"     onclick="selQ(this)">&#x1F5FA; Todos <span class="qcnt" style="background:rgba(255,255,255,.08);color:var(--text)">72</span></button>
   <button class="qb"     data-q="Q1 2026" onclick="selQ(this)">Q1/26 <span style="font-size:9px;color:var(--muted)">Jan&ndash;Mar</span> <span class="qcnt" style="background:rgba(59,130,246,.15);color:#3B82F6">23</span></button>
   <button class="qb"     data-q="Q2 2026" onclick="selQ(this)">Q2/26 <span style="font-size:9px;color:var(--muted)">Abr&ndash;Mai</span> <span class="qcnt" style="background:rgba(168,85,247,.15);color:#A855F7">13</span></button>
   <button class="qb"     data-q="Q3 2026" onclick="selQ(this)">Q3/26 <span style="font-size:9px;color:var(--muted)">Jul&ndash;Set</span> <span class="qcnt" style="background:rgba(245,158,11,.15);color:#F59E0B">11</span></button>
   <button class="qb"     data-q="Q4 2026" onclick="selQ(this)">Q4/26 <span style="font-size:9px;color:var(--muted)">Out&ndash;Dez</span> <span class="qcnt" style="background:rgba(239,68,68,.15);color:#EF4444">8</span></button>
-  <button class="qb"     data-q="Backlog"  onclick="selQ(this)">&#x1F4CB; Backlog <span class="qcnt" style="background:rgba(100,116,139,.15);color:#94A3B8">15</span></button>
+  <button class="qb"     data-q="Backlog"  onclick="selQ(this)">&#x1F4CB; Backlog <span class="qcnt" style="background:rgba(100,116,139,.15);color:#94A3B8">22</span></button>
 </div>
 
 <div class="sbar">
-  <div class="sc" onclick="selQByName('all')"><div class="lbl">Total</div><div class="num" style="color:var(--text)">70</div><div class="sub">&#233;picos</div></div>
-  <div class="sc" onclick="selQByName('all')"><div class="lbl">&#x2705; Conclu&#237;dos</div><div class="num" style="color:#21C25E">23</div><div class="sub">33% do total</div></div>
+  <div class="sc" onclick="selQByName('all')"><div class="lbl">Total</div><div class="num" style="color:var(--text)">72</div><div class="sub">&#233;picos</div></div>
+  <div class="sc" onclick="selQByName('all')"><div class="lbl">&#x2705; Conclu&#237;dos</div><div class="num" style="color:#21C25E">23</div><div class="sub">32% do total</div></div>
   <div class="sc" onclick="selQByName('Q2 2026')"><div class="lbl">&#x1F3D7; Build</div><div class="num" style="color:#3B82F6">6</div><div class="sub">Q2/26</div></div>
   <div class="sc" onclick="selQByName('Q2 2026')"><div class="lbl">&#x23ED; Priorizado</div><div class="num" style="color:#F59E0B">10</div><div class="sub">MVP4</div></div>
-  <div class="sc" onclick="selQByName('Backlog')"><div class="lbl">&#x1F4CB; Backlog</div><div class="num" style="color:#94A3B8">15</div><div class="sub">sem data limite</div></div>
+  <div class="sc" onclick="selQByName('Backlog')"><div class="lbl">&#x1F4CB; Backlog</div><div class="num" style="color:#94A3B8">22</div><div class="sub">sem data limite</div></div>
 </div>
 
 <div class="main" id="main">
@@ -164,77 +163,81 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
 // start = created  |  due = duedate
 // ===================================================
 var G2 = [
-  {key:"CAB2K-1196",name:"Homologa\u00e7\u00e3o - MVP1",status:"done",mvp:"MVP1 - B2K",start:"2025-10-28",due:"2025-11-18",assignee:"",quarter:"Q1 2026",desc:"ser\u00e1 centralizar todas as atividades / bug referentes aos testes integrados E2E das funcionalidades que est\u00e3o no MVP1"},
-  {key:"B2KTRA-557",name:"Uso - Autentica\u00e7\u00e3o 3DS",status:"done",mvp:"MVP1 - B2K",start:"2025-10-20",due:"2025-10-22",assignee:"",quarter:"Q1 2026",desc:"Solicita\u00e7\u00e3o de cadastramento do  BIN: 526784  na TAS, fornecedor 3DS realizada em 14/10."},
-  {key:"CAB2K-888",name:"Prepara\u00e7\u00e3o de base de Homologa\u00e7\u00e3o - Carregar Conta FIS",status:"done",mvp:"MVP1 - B2K",start:"2025-07-07",due:"2025-09-30",assignee:"",quarter:"Q1 2026",desc:"A\u00e7\u00f5es: Ser\u00e1 disponibilizado um arquivo MIS005 de carga full - gerado aos s\u00e1bados - para processamento e carregamento de conta cart\u00e3o em ambiente FIS b"},
-  {key:"CAB2K-1052",name:"Criar Contas e Cart\u00f5es Piloto",status:"done",mvp:"MVP1 - B2K",start:"2025-09-30",due:"2025-10-14",assignee:"",quarter:"Q1 2026",desc:"Criar Contas e Cart\u00f5es para o produto do Piloto B2K atrav\u00e9s da leitura do arquivo MIS005. Com essa implementa\u00e7\u00e3o:"},
-  {key:"CAB2K-1129",name:"Cadastramento do BIN B2K - MDES",status:"done",mvp:"MVP1 - B2K",start:"2025-09-29",due:"2025-10-31",assignee:"Vitor Marques Gaspar",quarter:"Q1 2026",desc:"Cadastrar o BIN do projeto B2K no projetos MDES (Mastercard)"},
-  {key:"CAB2K-920",name:"Uso - Home D\u00e9bito",status:"done",mvp:"MVP2 - B2K",start:"2025-09-02",due:"2025-11-18",assignee:"",quarter:"Q1 2026",desc:"Adapta\u00e7\u00e3o da Home de Cards D\u00e9bito em itens que ser\u00e3o utilizados nos MVPs 1 e 2 do piloto do B2K:"},
-  {key:"CAB2K-919",name:"Onboarding - Emiss\u00e3o/Embossing de Cart\u00e3o F\u00edsico",status:"done",mvp:"MVP2 - B2K",start:"2025-09-30",due:"2025-11-14",assignee:"Vitor Marques Gaspar",quarter:"Q1 2026",desc:"Alinhar, desenvolver e homologar arquivo de embossing no B2K, entre FIS e Jall."},
-  {key:"CAB2K-924",name:"Onboarding - Troca de Senha/Esqueci minha senha",status:"done",mvp:"MVP2 - B2K",start:"2025-11-04",due:"2025-12-02",assignee:"",quarter:"Q1 2026",desc:"Adaptar o fluxo de altera\u00e7\u00e3o de senha dos cart\u00f5es f\u00edsicos da base do PicPay, substituindo as regras atuais de bloqueio da processadora por dom\u00ednios de"},
-  {key:"CAB2K-926",name:"[MVP2] Uso - 2\u00aa Via (Perda / Roubo / Extravio) - B2k",status:"done",mvp:"MVP2 - B2K",start:"2025-11-18",due:"2026-03-10",assignee:"",quarter:"Q1 2026",desc:"Adaptar o fluxo de 2\u00aa via dos cart\u00f5es f\u00edsicos (titulares e dependente) da base do PicPay, substituindo as regras atuais de bloqueio da processadora po"},
-  {key:"CAB2K-925",name:"[MVP2] Onboarding - Gest\u00e3o do NFC -",status:"done",mvp:"MVP2 - B2K",start:"2025-12-13",due:"2026-01-20",assignee:"",quarter:"Q1 2026",desc:"Adaptar o fluxo de Gest\u00e3o do NFC (pagamento por aproxima\u00e7\u00e3o) dos cart\u00f5es (titulares e dependente) da base do PicPay, substituindo poss\u00edveis regras de "},
-  {key:"CAB2K-1354",name:"[MVP2] Testes Produtivos",status:"done",mvp:"MVP2 - B2K",start:"2026-01-27",due:"2026-03-10",assignee:"",quarter:"Q1 2026",desc:"Realiza\u00e7\u00e3o dos testes produtivos dos \u00e9picos / funcionalidades previstos para a 2\u00aa fase do piloto."},
-  {key:"CAB2K-921",name:"Onboarding - Desbloqueio/Ativa\u00e7\u00e3o",status:"done",mvp:"MVP2 - B2K",start:"2025-09-30",due:"2025-10-28",assignee:"",quarter:"Q1 2026",desc:"\u2192 Mapeamento do Uso do Bloqueio no Fluxo.  \u2192 Documenta\u00e7\u00e3o Nova."},
-  {key:"TRFSCC-1501",name:"[MVP2] -Cria\u00e7\u00e3o de Conta B2K",status:"done",mvp:"MVP2 - B2K",start:"2025-08-18",due:"2026-02-23",assignee:"",quarter:"Q1 2026",desc:"Este \u00c9pico contempla as hist\u00f3rias de: - cria\u00e7\u00e3o de novo entrypoint -- Criar novo endpoint e/ou novo t\u00f3pico com adequa\u00e7\u00e3o de payload. -- Avaliar do tim"},
-  {key:"B2KTRA-409",name:"Uso - Transa\u00e7\u00f5es + Notifica\u00e7\u00e3o D\u00e9bito",status:"done",mvp:"MVP2 - B2K",start:"2025-08-13",due:"2025-10-06",assignee:"",quarter:"Q1 2026",desc:"Desenvolvimento da jornada de Autoriza\u00e7\u00e3o no D\u00e9bito para a nova plataforma do B2K. Documenta\u00e7\u00e3o do fluxo atual (Vision):"},
-  {key:"B2KTRA-556",name:"Uso - Saque TECBAN",status:"done",mvp:"MVP2 - B2K",start:"2025-10-06",due:"2025-11-04",assignee:"",quarter:"Q1 2026",desc:"Abertura do pedido realizado junto \u00e0 TECBAN em 21.10.25. Aguardando o envio do planejamento de implanta\u00e7\u00e3o do lado deles."},
-  {key:"CAB2K-930",name:"Dom\u00ednio de Bloqueios",status:"done",mvp:"MVP3 - B2K",start:"2025-08-18",due:"2025-09-28",assignee:"",quarter:"Q1 2026",desc:""},
-  {key:"CAB2K-1061",name:"[MVP3] Altera\u00e7\u00e3o de Endere\u00e7o -",status:"done",mvp:"MVP3 - B2K",start:"2025-12-25",due:"2026-03-16",assignee:"",quarter:"Q1 2026",desc:"Implementar um novo fluxo de altera\u00e7\u00e3o de endere\u00e7o para contas, onde a persist\u00eancia e atualiza\u00e7\u00e3o do endere\u00e7o do usu\u00e1rio ser\u00e1 direcionada conforme o p"},
-  {key:"TRCSLS-857",name:"[B2K] Acompanhamento de Testes para Nova Arquitetura B2K",status:"done",mvp:"MVP3 - B2K",start:"2025-12-01",due:"2026-01-19",assignee:"Jean Pandolfi",quarter:"Q1 2026",desc:"Este \u00e9pico tem como objetivo dar continuidade ao acompanhamento iniciado no segundo trimestre (Q2) relacionado \u00e0  nova arquitetura B2K , com foco nos "},
-  {key:"CAB2K-1078",name:"[OKR 2 - Ser o Melhor] Bloqueio Tempor\u00e1rio",status:"done",mvp:"MVP3 - B2K",start:"2026-01-20",due:"2026-03-03",assignee:"",quarter:"Q1 2026",desc:"Descri\u00e7\u00e3o Este \u00e9pico visa integrar os cart\u00f5es processados pelo sistema B2K ao fluxo j\u00e1 existente de bloqueio tempor\u00e1rio, conforme regras, jornadas e p"},
-  {key:"CAB2K-1089",name:"[ MVP3]- Push Cadastral/Bloqueio -",status:"done",mvp:"MVP3 - B2K",start:"2025-12-25",due:"2026-03-16",assignee:"",quarter:"Q1 2026",desc:"Implementar um novo fluxo para recebermos e tratarmos os eventos de Push Cadastral (via socket) processados no B2K, afim de garantirmos a consist\u00eancia"},
-  {key:"CAC-1361",name:"[MVP3] - Adequa\u00e7\u00e3o processos para B2K - POC 6308",status:"done",mvp:"MVP3 - B2K",start:"2025-10-06",due:"2026-04-01",assignee:"Carla Teixeira Cavalcanti",quarter:"Q1 2026",desc:"Precisamos preparar a arquitetura regulat\u00f3ria e cont\u00e1bil para acompanhar a evolu\u00e7\u00e3o da arquitetura de 4 camadas, garantindo que os processos ligados a"},
-  {key:"CAB2K-1258",name:"[OKR2 - Ser o Melhor] Arquitetura de Cat\u00e1logo de Bloqueio",status:"done",mvp:"MVP3 - B2K",start:"2025-12-03",due:"2026-02-03",assignee:"",quarter:"Q1 2026",desc:"Atualiza\u00e7\u00e3o do catalogo de produtos para estrutura PicPay"},
-  {key:"CAC-1431",name:"Analise e documenta\u00e7\u00e3o do processo de concilia\u00e7\u00e3o transacional financeira",status:"done",mvp:"MVP3 - B2K",start:"2025-09-15",due:"2025-12-23",assignee:"",quarter:"Q1 2026",desc:""},
-  {key:"CAC-2057",name:"[MVP4] -B2K - Adequa\u00e7\u00e3o Processos - 5816",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026",desc:"Precisamos preparar a arquitetura regulat\u00f3ria e cont\u00e1bil para acompanhar a evolu\u00e7\u00e3o da arquitetura de 4 camadas, garantindo que os processos ligados a"},
-  {key:"CAB2K-1288",name:"[MVP4] Arquivos de Pagamento B2K - Migra\u00e7\u00e3o da Gera\u00e7\u00e3o e Concilia\u00e7\u00e3o de Pagamentos",status:"build",mvp:"MVP4 - B2K",start:"2026-01-01",due:"2026-05-31",assignee:"",quarter:"Q2 2026",desc:"Centralizar a responsabilidade pela gera\u00e7\u00e3o do arquivo de pagamentos  (UPIF para recomposi\u00e7\u00e3o de limite de cart\u00e3o na Fidelity - FIS) e pela sua concil"},
-  {key:"CAC-1975",name:"[MVP4] Adequa\u00e7\u00e3o Processos - 3050_B2k",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026",desc:"Precisamos preparar a arquitetura regulat\u00f3ria e cont\u00e1bil para acompanhar a evolu\u00e7\u00e3o da arquitetura de 4 camadas, garantindo que os processos ligados a"},
-  {key:"CAC-2042",name:"[MVP4] - B2K - Adequa\u00e7\u00e3o Processos - 3060",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026",desc:"Precisamos preparar a arquitetura regulat\u00f3ria e cont\u00e1bil para acompanhar a evolu\u00e7\u00e3o da arquitetura de 4 camadas, garantindo que os processos ligados a"},
-  {key:"CAB2K-1280",name:"[MVP4] Enable Cria\u00e7\u00e3o de Conta (Cat\u00e1logo de Produtos)",status:"build",mvp:"MVP4 - B2K",start:"2026-02-03",due:"2026-05-05",assignee:"",quarter:"Q2 2026",desc:"\ud83c\udfaf Problema O PicPay oferece m\u00faltiplos produtos de cart\u00e3o de cr\u00e9dito \u2014 PicPay Original e PicPay Consignado \u2014 cada um com diferentes  segmentos  (Gold,"},
-  {key:"CAC-2056",name:"[MVP4] - B2K - Adequa\u00e7\u00e3o Processos - Descontinua\u00e7\u00e3o ARQConcilia\u00e7\u00e3o",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026",desc:"Precisamos preparar a arquitetura regulat\u00f3ria e cont\u00e1bil para acompanhar a evolu\u00e7\u00e3o da arquitetura de 4 camadas, garantindo que os processos ligados a"},
-  {key:"B2KTRA-872",name:"[MVP4] Gera\u00e7\u00e3o de Fatura_B2K",status:"discovery",mvp:"MVP4 - B2K",start:"2026-04-06",due:"2026-06-26",assignee:"",quarter:"Q2 2026",desc:"Atualmente, a nova arquitetura de gera\u00e7\u00e3o e processamento de faturas foi concebida considerando os padr\u00f5es e estruturas da plataforma Vision. Entretan"},
-  {key:"TRFSCC-1953",name:"[MVP4] - Cria\u00e7\u00e3o de Conta integrada com Oferta - B2K",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-04-20",due:"2026-06-30",assignee:"",quarter:"Q2 2026",desc:""},
-  {key:"B2KTRA-901",name:"[MVP4] Autorizador de Cr\u00e9dito Off Us_B2K",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-05-18",due:"2026-06-26",assignee:"",quarter:"Q2 2026",desc:"Com a migra\u00e7\u00e3o da processadora de cart\u00f5es para a  B2K , \u00e9 necess\u00e1rio garantir que todas as parametriza\u00e7\u00f5es relacionadas ao  fluxo de autoriza\u00e7\u00e3o de cr"},
-  {key:"B2KTRA-551",name:"[MVP4] Timeline Transacional Cr\u00e9dito_ B2K",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-06-01",due:"2026-06-26",assignee:"",quarter:"Q2 2026",desc:"A funcionalidade de  Timeline de Cr\u00e9dito  existente hoje no APP exibe ao usu\u00e1rio o hist\u00f3rico e status das suas transa\u00e7\u00f5es de cr\u00e9dito.  Com a migra\u00e7\u00e3o "},
-  {key:"CAB2K-1434",name:"[MVP4] Push Transacional",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-06-30",assignee:"",quarter:"Q2 2026",desc:"\ud83c\udfaf Problema Hoje, quando o cliente realiza transa\u00e7\u00f5es com o cart\u00e3o PicPay (compras, estornos, etc.), o sistema envia  push notifications transacionais"},
-  {key:"CAB2K-1433",name:"[MVP4] Card de Limite na Home",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-06-01",due:"2026-06-30",assignee:"",quarter:"Q2 2026",desc:"\ud83c\udfaf Problema Hoje, a  Home do PicPay Card  j\u00e1 exibe um card de limite abaixo da se\u00e7\u00e3o de fatura, mostrando ao cliente seu  limite contratado ,  limite "},
-  {key:"CAB2K-1432",name:"[MVP4] Atribui\u00e7\u00e3o de Limite Conta Nova",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-06-15",assignee:"",quarter:"Q2 2026",desc:"\ud83c\udfaf Problema Hoje, o fluxo de  enrollment de conta nova  (cria\u00e7\u00e3o + atribui\u00e7\u00e3o de limite) acontece integralmente via  processadora Vision . Todo o proc"},
-  {key:"B2KTRA-910",name:"[MVP 5] Discovery Parcelados",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-04-30",assignee:"",quarter:"Q3 2026",desc:""},
-  {key:"B2KTRA-912",name:"[MVP 5] Discovery Cashback",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-05-29",assignee:"",quarter:"Q3 2026",desc:""},
-  {key:"CAB2K-1445",name:"[MVP5] Discovery - Carteiras Digitais",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-05-01",due:"2026-06-30",assignee:"",quarter:"Q3 2026",desc:"Discovery junto ao time owner para entendimento das regras de neg\u00f3cios e funcionamento t\u00e9cnico da feature de Carteira Digital, para que assim possamos"},
-  {key:"B2KTRA-911",name:"[MVP5] Discovery Microfinanciamento",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-05-15",assignee:"",quarter:"Q3 2026",desc:""},
-  {key:"CAB2K-1435",name:"[MVP5] - Recomposi\u00e7\u00e3o de Limite",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-03-24",due:"",assignee:"",quarter:"Q3 2026",desc:"\ud83c\udfaf Problema Hoje, quando o cliente PicPay Card realiza o pagamento de sua fatura (total, parcial ou antecipa\u00e7\u00e3o), o sistema envia um est\u00edmulo para a  "},
-  {key:"CAB2K-1265",name:"[MVP5] - Uso - 2\u00aa Via (Danificado)",status:"wishlist",mvp:"MVP5 - B2K",start:"2025-11-24",due:"",assignee:"",quarter:"Q3 2026",desc:"Adaptar o fluxo de 2\u00aa via dos cart\u00f5es f\u00edsicos (titulares e dependente) da base do PicPay, substituindo as regras atuais de bloqueio da processadora po"},
-  {key:"B2KTRA-915",name:"[MVP 5] Parcelados",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-04-30",assignee:"",quarter:"Q3 2026",desc:""},
-  {key:"B2KTRA-914",name:"[MVP5] Autorizador de Cr\u00e9dito On Us_B2K",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-05-18",due:"2026-06-26",assignee:"",quarter:"Q3 2026",desc:""},
-  {key:"CAB2K-1065",name:"[MVP5] -Cart\u00e3o Virtual",status:"wishlist",mvp:"MVP5 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Q3 2026",desc:"\ud83c\udfaf Objetivo do \u00c9pico Adaptar a funcionalidade de  Cart\u00e3o Virtual  do PicPay Card para operar sobre a  processadora B2K , garantindo que todas as jorna"},
-  {key:"CAB2K-1446",name:"[MVP5] - Pagamento de Fatura",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-04-06",due:"",assignee:"",quarter:"Q3 2026",desc:"Necessidade de adapta\u00e7\u00f5es dentro das bases de pagamentos atuais para que consigamos ter a separa\u00e7\u00e3o entre pagamentos do Vision+ e B2K, al\u00e9m do control"},
-  {key:"CAB2K-1071",name:"[MVP5] - Carteira Digital (Wallet)",status:"wishlist",mvp:"MVP5 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Q3 2026",desc:""},
-  {key:"CAB2K-1080",name:"[MVP6] - Cart\u00e3o Adicional / Dependente",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Q4 2026",desc:""},
-  {key:"CAB2K-1081",name:"Home Cr\u00e9dito",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Q4 2026",desc:""},
-  {key:"CARCN-355",name:"[Q3] Consignado - B2K",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-06-24",due:"",assignee:"Mariana Alves Machado Monteiro",quarter:"Q4 2026",desc:""},
-  {key:"CAB2K-1282",name:"[MVP6] - Upgrade de Fun\u00e7\u00e3o (Ativa\u00e7\u00e3o do Cr\u00e9dito)",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-12-02",due:"",assignee:"",quarter:"Q4 2026",desc:""},
-  {key:"CAB2K-1066",name:"[MVP6] - Rastreio de Cart\u00e3o",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026",desc:""},
-  {key:"CAB2K-1062",name:"Reposit\u00f3rio de D\u00e9bito",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Q4 2026",desc:"Hoje o reposit\u00f3rio de d\u00e9bito s\u00e3o de contas Puro D\u00e9bito e no B2K s\u00f3 teremos conta de cr\u00e9dito, com fun\u00e7\u00e3o cr\u00e9dito desativada ter\u00edamos que criar uma regr"},
-  {key:"CAB2K-1074",name:"[MVP6]- Aviso Viagem",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Q4 2026",desc:"Obs: Verificar se o time owner retirou do card-account"},
-  {key:"CAB2K-1077",name:"[MVP6] - Upgrade de Variante (Produto/Subproduto)",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026",desc:""},
-  {key:"CAB2K-1083",name:"[MVP5] - Limite Clean - Ajuste/Manuten\u00e7\u00e3o",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog",desc:""},
-  {key:"CAB2K-1447",name:"Expurgo",status:"wishlist",mvp:"Backlog",start:"2026-04-07",due:"",assignee:"",quarter:"Backlog",desc:"Realizar o entendimento do funcionamento do expurgo no B2K e realizar um comparativo versus o mesmo processo no Visio+ para garantir a equaliza\u00e7\u00e3o de "},
-  {key:"CAB2K-1075",name:"Banners e Alertas",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog",desc:""},
-  {key:"CAB2K-1070",name:"Underage",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog",desc:""},
-  {key:"CAB2K-1063",name:"Tombamento de Clientes",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog",desc:"Itens: 1. Receber e processar a MIS005 FULL e gravar os dados respectivos sobre o B2K 2. Receber e processar o arquivo de JWTTOKEN (TB_CARTAO). 3. Con"},
-  {key:"CAB2K-1084",name:"[MVP6] - Limite Garantido",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog",desc:""},
-  {key:"CAB2K-1085",name:"Limite On-US",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"2026-04-07",assignee:"",quarter:"Backlog",desc:""},
-  {key:"CAB2K-1086",name:"Limite CDT / FGTS",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog",desc:""},
-  {key:"CAB2K-1087",name:"[MVP6] - Upgrade de N\u00edvel (Limites)",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog",desc:""},
-  {key:"CAB2K-1090",name:"Integra\u00e7\u00e3o com Time de Dados",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog",desc:""},
-  {key:"CAB2K-1099",name:"Bloqueios Picpay",status:"wishlist",mvp:"Backlog",start:"2025-09-17",due:"",assignee:"",quarter:"Backlog",desc:"For\u00e7ar a grava\u00e7\u00e3o do Bloqueio Picpay em todos os fluxos de grava\u00e7\u00e3o. Solu\u00e7\u00e3o Atualmente \u00e9 gravado os campos (block_code, block_code1, block_code2), e "},
-  {key:"CAB2K-1281",name:"[MVP6] - Cota\u00e7\u00e3o do Dolar",status:"wishlist",mvp:"Backlog",start:"2025-12-02",due:"",assignee:"",quarter:"Backlog",desc:""},
-  {key:"CAB2K-1060",name:"Carregar JwtToken (ID_CARTAO)",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog",desc:"Avaliar a necessidade de ler o TB_CARTAO com o ID_CARTAO para ler cart\u00f5es criados somente na FIS que vem no MIS005."},
-  {key:"CAB2K-1088",name:"Cart\u00f5es e Limites na tela de Checkout de Pagamento Picpay",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog",desc:""},
-  {key:"CAB2K-960",name:"Arquivos de Interface AMC001/AMC002 - B2K",status:"wishlist",mvp:"Backlog",start:"2025-07-29",due:"",assignee:"",quarter:"Backlog",desc:"Os arquivos de Interface Cadastral s\u00e3o utilizados para altera\u00e7\u00f5es cadastrais por lote, em arquivo. AMC001 - Envio AMC002 - Retorno (Com status da alte"},
+  {key:"CAB2K-888",name:"Prepara\u00e7\u00e3o de base de Homologa\u00e7\u00e3o - Carregar Conta FIS",status:"done",mvp:"MVP1 - B2K",start:"2025-07-07",due:"2025-09-30",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-1052",name:"Criar Contas e Cart\u00f5es Piloto",status:"done",mvp:"MVP1 - B2K",start:"2025-09-30",due:"2025-10-14",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-1129",name:"Cadastramento do BIN B2K - MDES",status:"done",mvp:"MVP1 - B2K",start:"2025-09-29",due:"2025-10-31",assignee:"Vitor Marques Gaspar",quarter:"Q1 2026"},
+  {key:"CAB2K-1196",name:"Homologa\u00e7\u00e3o - MVP1",status:"done",mvp:"MVP1 - B2K",start:"2025-10-28",due:"2025-11-18",assignee:"",quarter:"Q1 2026"},
+  {key:"B2KTRA-557",name:"Uso - Autentica\u00e7\u00e3o 3DS",status:"done",mvp:"MVP1 - B2K",start:"2025-10-20",due:"2025-10-22",assignee:"",quarter:"Q1 2026"},
+  {key:"TRFSCC-1501",name:"[MVP2] Cria\u00e7\u00e3o de Conta B2K",status:"done",mvp:"MVP2 - B2K",start:"2025-08-18",due:"2026-02-23",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-921",name:"Onboarding - Desbloqueio/Ativa\u00e7\u00e3o",status:"done",mvp:"MVP2 - B2K",start:"2025-09-30",due:"2025-10-28",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-919",name:"Onboarding - Emiss\u00e3o/Embossing Cart\u00e3o F\u00edsico",status:"done",mvp:"MVP2 - B2K",start:"2025-09-30",due:"2025-11-14",assignee:"Vitor Marques Gaspar",quarter:"Q1 2026"},
+  {key:"CAB2K-924",name:"Onboarding - Troca de Senha",status:"done",mvp:"MVP2 - B2K",start:"2025-11-04",due:"2025-12-02",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-925",name:"[MVP2] Onboarding - Gest\u00e3o do NFC",status:"done",mvp:"MVP2 - B2K",start:"2025-12-13",due:"2026-01-20",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-926",name:"[MVP2] Uso - 2\u00aa Via (Perda/Roubo/Extravio)",status:"done",mvp:"MVP2 - B2K",start:"2025-11-18",due:"2026-03-10",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-920",name:"Uso - Home D\u00e9bito",status:"done",mvp:"MVP2 - B2K",start:"2025-09-02",due:"2025-11-18",assignee:"",quarter:"Q1 2026"},
+  {key:"B2KTRA-556",name:"Uso - Saque TECBAN",status:"done",mvp:"MVP2 - B2K",start:"2025-10-06",due:"2025-11-04",assignee:"",quarter:"Q1 2026"},
+  {key:"B2KTRA-409",name:"Uso - Transa\u00e7\u00f5es + Notifica\u00e7\u00e3o D\u00e9bito",status:"done",mvp:"MVP2 - B2K",start:"2025-08-13",due:"2025-10-06",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-1354",name:"[MVP2] Testes Produtivos",status:"done",mvp:"MVP2 - B2K",start:"2026-01-27",due:"2026-03-10",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-930",name:"Dom\u00ednio de Bloqueios",status:"done",mvp:"MVP3 - B2K",start:"2025-08-18",due:"2025-09-28",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-1078",name:"[OKR 2] Bloqueio Tempor\u00e1rio",status:"done",mvp:"MVP3 - B2K",start:"2026-01-20",due:"2026-03-03",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-1258",name:"Arquitetura Cat\u00e1logo de Bloqueio",status:"done",mvp:"MVP3 - B2K",start:"2025-12-03",due:"2026-02-03",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-1089",name:"[MVP3] Push Cadastral/Bloqueio",status:"done",mvp:"MVP3 - B2K",start:"2025-12-25",due:"2026-03-16",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-1061",name:"[MVP3] Altera\u00e7\u00e3o de Endere\u00e7o",status:"done",mvp:"MVP3 - B2K",start:"2025-12-25",due:"2026-03-16",assignee:"",quarter:"Q1 2026"},
+  {key:"CAC-1361",name:"[MVP3] Adequa\u00e7\u00e3o processos B2K - POC 6308",status:"done",mvp:"MVP3 - B2K",start:"2025-10-06",due:"2026-04-01",assignee:"Carla Teixeira Cavalcanti",quarter:"Q1 2026"},
+  {key:"CAC-1431",name:"An\u00e1lise processo de concilia\u00e7\u00e3o transacional",status:"done",mvp:"MVP3 - B2K",start:"2025-09-15",due:"2025-12-23",assignee:"",quarter:"Q1 2026"},
+  {key:"TRCSLS-857",name:"[B2K] Acompanhamento de Testes Nova Arquitetura B2K",status:"done",mvp:"MVP3 - B2K",start:"2025-12-01",due:"2026-01-19",assignee:"Jean Pandolfi",quarter:"Q1 2026"},
+  {key:"CAC-2057",name:"[MVP4] B2K - Adequa\u00e7\u00e3o Processos 5816",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
+  {key:"CAB2K-1288",name:"[MVP4] Arquivos de Pagamento B2K - Migra\u00e7\u00e3o e Concilia\u00e7\u00e3o",status:"build",mvp:"MVP4 - B2K",start:"2026-01-01",due:"2026-05-31",assignee:"",quarter:"Q2 2026"},
+  {key:"CAC-1975",name:"[MVP4] Adequa\u00e7\u00e3o Processos 3050 B2K",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
+  {key:"CAC-2042",name:"[MVP4] B2K - Adequa\u00e7\u00e3o Processos 3060",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
+  {key:"CAB2K-1280",name:"[MVP4] Enable Cria\u00e7\u00e3o de Conta (Cat\u00e1logo de Produtos)",status:"build",mvp:"MVP4 - B2K",start:"2026-02-03",due:"2026-05-05",assignee:"",quarter:"Q2 2026"},
+  {key:"CAC-2056",name:"[MVP4] B2K - Descontinua\u00e7\u00e3o ARQ Concilia\u00e7\u00e3o",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
+  {key:"B2KTRA-872",name:"[MVP4] Gera\u00e7\u00e3o de Fatura B2K",status:"discovery",mvp:"MVP4 - B2K",start:"2026-04-06",due:"2026-06-26",assignee:"",quarter:"Q2 2026"},
+  {key:"TRFSCC-1953",name:"[MVP4] Cria\u00e7\u00e3o de Conta integrada com Oferta B2K",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-04-20",due:"2026-06-30",assignee:"",quarter:"Q2 2026"},
+  {key:"B2KTRA-901",name:"[MVP4] Autorizador de Cr\u00e9dito Off Us B2K",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-05-18",due:"2026-06-26",assignee:"",quarter:"Q2 2026"},
+  {key:"B2KTRA-551",name:"[MVP4] Timeline Transacional Cr\u00e9dito B2K",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-06-01",due:"2026-06-26",assignee:"",quarter:"Q2 2026"},
+  {key:"CAB2K-1434",name:"[MVP4] Push Transacional",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-06-30",assignee:"",quarter:"Q2 2026"},
+  {key:"CAB2K-1433",name:"[MVP4] Card de Limite na Home",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-06-01",due:"2026-06-30",assignee:"",quarter:"Q2 2026"},
+  {key:"CAB2K-1432",name:"[MVP4] Atribui\u00e7\u00e3o de Limite Conta Nova",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-06-15",assignee:"",quarter:"Q2 2026"},
+  {key:"B2KTRA-910",name:"[MVP5] Discovery Parcelados",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"",quarter:"Q3 2026"},
+  {key:"B2KTRA-911",name:"[MVP5] Discovery Microfinanciamento",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-05-15",assignee:"",quarter:"Q3 2026"},
+  {key:"B2KTRA-912",name:"[MVP5] Discovery Cashback",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-05-29",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1445",name:"[MVP5] Discovery - Carteiras Digitais",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-05-01",due:"2026-06-30",assignee:"",quarter:"Q3 2026"},
+  {key:"B2KTRA-914",name:"[MVP5] Autorizador de Cr\u00e9dito On Us B2K",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-05-18",due:"2026-06-26",assignee:"",quarter:"Q3 2026"},
+  {key:"B2KTRA-915",name:"[MVP5] Parcelados",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-04-30",assignee:"",quarter:"Q3 2026"},
+  {key:"B2KTRA-916",name:"[MVP5] Parcelados",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"B2KTRA-917",name:"[MVP5] Cashback",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"TRFSCC-1969",name:"[MVP5] Cria\u00e7\u00e3o de Conta - Incluir Fallback B2K",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1435",name:"[MVP5] Recomposi\u00e7\u00e3o de Limite",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-03-24",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1446",name:"[MVP5] Pagamento de Fatura",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-04-06",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1083",name:"[MVP5] Limite Clean - Ajuste/Manuten\u00e7\u00e3o",status:"wishlist",mvp:"MVP5 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1071",name:"[MVP5] Carteira Digital (Wallet)",status:"wishlist",mvp:"MVP5 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1065",name:"[MVP5] Cart\u00e3o Virtual",status:"wishlist",mvp:"MVP5 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1265",name:"[MVP5] Uso - 2\u00aa Via (Danificado)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1282",name:"[MVP6] Upgrade de Fun\u00e7\u00e3o (Ativa\u00e7\u00e3o do Cr\u00e9dito)",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-12-02",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1080",name:"[MVP6] Cart\u00e3o Adicional / Dependente",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1077",name:"[MVP6] Upgrade de Variante (Produto/Subproduto)",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
+  {key:"CAB2K-1074",name:"[MVP6] Aviso Viagem",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1066",name:"[MVP6] Rastreio de Cart\u00e3o",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
+  {key:"CAB2K-1062",name:"[MVP6] Reposit\u00f3rio de D\u00e9bito",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
+  {key:"CAB2K-1081",name:"Home Cr\u00e9dito",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1447",name:"[MVP6] Expurgo",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
+  {key:"CARCN-355",name:"[Q3] Consignado - B2K",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-06-24",due:"",assignee:"Mariana Alves Machado Monteiro",quarter:"Backlog"},
+  {key:"CAB2K-1087",name:"[MVP6] Upgrade de N\u00edvel (Limites)",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1084",name:"[MVP6] Limite Garantido",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1099",name:"Bloqueios Picpay",status:"wishlist",mvp:"Backlog",start:"2025-09-17",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1090",name:"Integra\u00e7\u00e3o com Time de Dados",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1088",name:"Cart\u00f5es e Limites no Checkout",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1086",name:"Limite CDT / FGTS",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1075",name:"Banners e Alertas",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1070",name:"Underage",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1063",name:"Tombamento de Clientes",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1060",name:"Carregar JwtToken (ID_CARTAO)",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-960",name:"Arquivos de Interface AMC001/AMC002",status:"wishlist",mvp:"Backlog",start:"2025-07-29",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1281",name:"[MVP6] Cota\u00e7\u00e3o do Dolar",status:"wishlist",mvp:"Backlog",start:"2025-12-02",due:"",assignee:"",quarter:"Backlog"},
 ];
+
+
 
 // MAP
 var EMAP = {};
@@ -544,4 +547,4 @@ document.addEventListener("mousemove",function(e){
 render();
 </script>
 </body>
-</html>
+</html>ng index.html…]()
