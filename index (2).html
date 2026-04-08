@@ -1,4 +1,3 @@
-
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -15,7 +14,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
-nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:52px;display:flex;align-items:center;padding:0 24px;gap:8px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:44px;display:flex;align-items:center;padding:0 16px;gap:6px;}
 .nbrand{font-weight:800;font-size:14px;color:var(--text);margin-right:8px;}.nbrand span{color:#21C25E;}
 .nsep{width:1px;height:20px;background:var(--border);flex-shrink:0;}
 .nright{margin-left:auto;font-size:11px;color:var(--muted)}.nright b{color:#21C25E;}
@@ -26,7 +25,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
 .sf-pri{background:rgba(245,158,11,.15);border-color:rgba(245,158,11,.4);color:#F59E0B;}
 .sf-disc{background:rgba(168,85,247,.15);border-color:rgba(168,85,247,.4);color:#A855F7;}
 .sf-wish{background:rgba(100,116,139,.15);border-color:rgba(100,116,139,.4);color:#94A3B8;}
-.qbar{position:fixed;top:52px;left:0;right:0;z-index:290;background:rgba(10,14,26,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;gap:6px;height:48px;overflow-x:auto;}
+.qbar{position:fixed;top:44px;left:0;right:0;z-index:290;background:rgba(10,14,26,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 16px;display:flex;align-items:center;gap:5px;height:44px;overflow-x:auto;}
 .qbar::-webkit-scrollbar{height:3px;}.qbar::-webkit-scrollbar-thumb{background:var(--dim);border-radius:10px;}
 .qb{flex-shrink:0;padding:5px 14px;border-radius:9px;font-size:12px;font-weight:700;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;}
 .qb:hover{background:rgba(255,255,255,.04);border-color:var(--border2);color:var(--text);}
@@ -38,29 +37,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
 .qb[data-q="Q4 2026"].sel{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.4);color:#EF4444;}
 .qb[data-q="Backlog"].sel{background:rgba(100,116,139,.12);border-color:rgba(100,116,139,.4);color:#94A3B8;}
 .qcnt{font-size:10px;padding:2px 6px;border-radius:100px;font-weight:700;}
-.sbar{max-width:1600px;margin:0 auto;padding:116px 24px 16px;display:flex;gap:10px;flex-wrap:wrap;}
-.sc{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 18px;flex:1;min-width:120px;cursor:pointer;transition:all .2s;}
+.sbar{max-width:100%;margin:0;padding:92px 16px 8px;display:flex;gap:8px;flex-wrap:nowrap;}
+.sc{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:8px 14px;flex:1;min-width:100px;cursor:pointer;transition:all .2s;}
 .sc:hover{border-color:var(--border2);}
 .sc .lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:5px;}
-.sc .num{font-size:26px;font-weight:900;}
+.sc .num{font-size:20px;font-weight:900;}
 .sc .sub{font-size:11px;color:var(--muted);margin-top:2px;}
-.main{max-width:1600px;margin:0 auto;padding:0 24px 80px;}
-.qtrow{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
+.main{max-width:100%;margin:0;padding:0 16px 40px;}
+.qtrow{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;}
 .qtrow h2{font-size:18px;font-weight:800;}
 .qper{font-size:12px;color:var(--muted);padding:3px 10px;border-radius:100px;background:rgba(255,255,255,.04);border:1px solid var(--border);}
-.leg{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:12px;align-items:center;}
+.leg{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:6px;align-items:center;}
 .leg-i{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--muted);}
 .leg-sw{width:20px;height:8px;border-radius:3px;}
-.gantt{display:grid;grid-template-columns:295px 1fr;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--bg2);}
+.gantt{display:grid;grid-template-columns:240px 1fr;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--bg2);}
 .lp{border-right:1px solid var(--border);}
 .lph{height:72px;min-height:72px;display:flex;align-items:flex-end;padding:10px 12px;border-bottom:1px solid var(--border);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);}
-.er{display:flex;align-items:flex-start;padding:8px 10px;height:64px;min-height:64px;border-bottom:1px solid var(--border);gap:7px;overflow:hidden;}
+.er{display:flex;align-items:flex-start;padding:5px 8px;height:52px;min-height:52px;border-bottom:1px solid var(--border);gap:6px;overflow:hidden;}
 .er:hover{background:rgba(255,255,255,.025);}
 .er-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:4px;}
 .er-key{font-size:10px;color:var(--dim);flex-shrink:0;width:82px;text-decoration:none;font-family:monospace;transition:color .15s;margin-top:1px;display:block;}
 .er-key:hover{color:#21C25E;}
 .er-info{flex:1;min-width:0;}
-.er-name{font-size:11.5px;color:var(--text);line-height:1.35;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.er-name{font-size:11px;color:var(--text);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
 .er-dates{font-size:9.5px;color:#4A5170;margin-top:3px;letter-spacing:.01em;}
 .rp{overflow-x:auto;}.rp::-webkit-scrollbar{height:4px;}.rp::-webkit-scrollbar-thumb{background:var(--dim);border-radius:10px;}
 .gi{position:relative;min-width:600px;}
@@ -68,7 +67,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
 .ghm{position:relative;height:36px;border-bottom:1px solid var(--border);background:var(--bg2);}
 .ghqc{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;border-right:1px solid var(--border);flex-shrink:0;}
 .ghmc{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-right:1px solid var(--border);flex-shrink:0;}
-.gr{position:relative;height:64px;min-height:64px;border-bottom:1px solid var(--border);display:flex;align-items:center;}
+.gr{position:relative;height:52px;min-height:52px;border-bottom:1px solid var(--border);display:flex;align-items:center;}
 .gr:hover{background:rgba(255,255,255,.02);}
 .gc{height:100%;flex-shrink:0;border-right:1px solid rgba(255,255,255,.02);}
 .gbar{position:absolute;height:26px;border-radius:6px;top:50%;transform:translateY(-50%);display:flex;align-items:center;padding:0 7px;font-size:9.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;transition:all .2s;z-index:3;border:1px solid transparent;}
@@ -107,27 +106,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
   <button class="sf sf-pri"   data-s="prioritized" onclick="togS(this)">&#x23ED; Priorizado</button>
   <button class="sf sf-disc"  data-s="discovery"   onclick="togS(this)">&#x1F50D; Discovery</button>
   <button class="sf sf-wish"  data-s="wishlist"    onclick="togS(this)">&#x1F4CB; Wishlist</button>
-  <div class="nright">Progresso: <b style="color:#21C25E">31%</b> &middot; 23/74</div>
+  <div class="nright">Progresso: <b style="color:#21C25E">25%</b> &middot; 23/91</div>
 </nav>
 
 <div class="qbar">
-  <button class="qb sel" data-q="all"     onclick="selQ(this)">&#x1F5FA; Todos <span class="qcnt" style="background:rgba(255,255,255,.08);color:var(--text)">74</span></button>
+  <button class="qb sel" data-q="all"     onclick="selQ(this)">&#x1F5FA; Todos <span class="qcnt" style="background:rgba(255,255,255,.08);color:var(--text)">91</span></button>
   <button class="qb"     data-q="Q1 2026" onclick="selQ(this)">Q1/26 <span style="font-size:9px;color:var(--muted)">Jan&ndash;Mar</span> <span class="qcnt" style="background:rgba(59,130,246,.15);color:#3B82F6">23</span></button>
   <button class="qb"     data-q="Q2 2026" onclick="selQ(this)">Q2/26 <span style="font-size:9px;color:var(--muted)">Abr&ndash;Mai</span> <span class="qcnt" style="background:rgba(168,85,247,.15);color:#A855F7">13</span></button>
   <button class="qb"     data-q="Q3 2026" onclick="selQ(this)">Q3/26 <span style="font-size:9px;color:var(--muted)">Jul&ndash;Set</span> <span class="qcnt" style="background:rgba(245,158,11,.15);color:#F59E0B">11</span></button>
   <button class="qb"     data-q="Q4 2026" onclick="selQ(this)">Q4/26 <span style="font-size:9px;color:var(--muted)">Out&ndash;Dez</span> <span class="qcnt" style="background:rgba(239,68,68,.15);color:#EF4444">8</span></button>
-  <button class="qb"     data-q="Backlog"  onclick="selQ(this)">&#x1F4CB; Backlog <span class="qcnt" style="background:rgba(100,116,139,.15);color:#94A3B8">9</span></button>
+  <button class="qb"     data-q="Backlog"  onclick="selQ(this)">&#x1F4CB; Backlog <span class="qcnt" style="background:rgba(100,116,139,.15);color:#94A3B8">25</span></button>
   <button class="qb" style="background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.35);color:#EF4444;cursor:default;flex-shrink:0;" title="GAPs identificados no Q2/26">
     &#x26A0; 24 GAPs
   </button>
 </div>
 
 <div class="sbar">
-  <div class="sc" onclick="selQByName('all')"><div class="lbl">Total</div><div class="num" style="color:var(--text)">74</div><div class="sub">&#233;picos</div></div>
-  <div class="sc" onclick="selQByName('all')"><div class="lbl">&#x2705; Conclu&#237;dos</div><div class="num" style="color:#21C25E">23</div><div class="sub">31% do total</div></div>
+  <div class="sc" onclick="selQByName('all')"><div class="lbl">Total</div><div class="num" style="color:var(--text)">91</div><div class="sub">&#233;picos</div></div>
+  <div class="sc" onclick="selQByName('all')"><div class="lbl">&#x2705; Conclu&#237;dos</div><div class="num" style="color:#21C25E">23</div><div class="sub">25% do total</div></div>
   <div class="sc" onclick="selQByName('Q2 2026')"><div class="lbl">&#x1F3D7; Build</div><div class="num" style="color:#3B82F6">6</div><div class="sub">Q2/26</div></div>
   <div class="sc" onclick="selQByName('Q2 2026')"><div class="lbl">&#x23ED; Priorizado</div><div class="num" style="color:#F59E0B">10</div><div class="sub">MVP4</div></div>
-  <div class="sc" onclick="selQByName('Backlog')"><div class="lbl">&#x1F4CB; Backlog</div><div class="num" style="color:#94A3B8">9</div><div class="sub">sem data limite</div></div>
+  <div class="sc" onclick="selQByName('Backlog')"><div class="lbl">&#x1F4CB; Backlog</div><div class="num" style="color:#94A3B8">25</div><div class="sub">sem data limite</div></div>
 </div>
 
 <div class="main" id="main">
@@ -211,35 +210,58 @@ var G2 = [
   {key:"CAB2K-1265",name:"[MVP5] - Uso - 2\u00aa Via (Danificado)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1090",name:"[MVP5] - Integra\u00e7\u00e3o com Time de Dados",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1084",name:"[MVP5] - Limite Garantido",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
-  {key:"CAB2K-1083",name:"[MVP5] - Limite Clean - Ajuste/Manuten\u00e7\u00e3o",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1083",name:"[MVP5] - Ajuste/Manuten\u00e7\u00e3o de Limite",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1071",name:"[MVP5] - Carteira Digital (Wallet)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
-  {key:"CAB2K-1065",name:"[MVP5] -Cart\u00e3o Virtual",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
-  {key:"CAB2K-1060",name:"[MVP5] - Carregar JwtToken (ID_CARTAO)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1065",name:"[MVP5] - Cart\u00e3o Virtual",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1060",name:"[MVP6] -  Carregar JwtToken (ID_CARTAO)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-917",name:"[MVP 5] Cashback",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-916",name:"[MVP 5]  Parcelados",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-915",name:"[MVP5]  MicroFinanciamento",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-914",name:"[MVP5] Autorizador de Cr\u00e9dito On Us_B2K",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CARCN-355",name:"[Q3] Consignado - B2K",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-06-24",due:"",assignee:"Mariana Alves Machado Monteiro",quarter:"Backlog"},
-  {key:"CAB2K-1451",name:"[MVP6]- Recupera\u00e7\u00e3o de Credito",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
-  {key:"CAB2K-1450",name:"[MVP6]- Anuidade",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
+  {key:"CAB2K-1451",name:"[MVP6] - Recupera\u00e7\u00e3o de Credito",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
+  {key:"CAB2K-1450",name:"[MVP6] - Anuidade",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
   {key:"CAB2K-1447",name:"[MVP6] - Expurgo",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
   {key:"CAB2K-1282",name:"[MVP6] - Upgrade de Fun\u00e7\u00e3o (Ativa\u00e7\u00e3o do Cr\u00e9dito)",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
   {key:"CAB2K-1281",name:"[MVP6] - Cota\u00e7\u00e3o do Dolar",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
-  {key:"CAB2K-1087",name:"[MVP6] - Upgrade de N\u00edvel (Limites)",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
+  {key:"CAB2K-1087",name:"[MVP6] - Upgrade de N\u00edvel (N1/N2/N3)",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
   {key:"CAB2K-1080",name:"[MVP6] - Cart\u00e3o Adicional / Dependente",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
   {key:"CAB2K-1077",name:"[MVP6] - Upgrade de Variante (Produto/Subproduto)",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
-  {key:"CAB2K-1074",name:"[MVP6]- Aviso Viagem",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
-  {key:"CAB2K-1066",name:"[MVP6] - Rastreio de Cart\u00e3o",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
+  {key:"CAB2K-1066",name:"[MVP6] - Arquivo de AR (Rastreio)",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
   {key:"CAB2K-1062",name:"[MVP6] - Reposit\u00f3rio de D\u00e9bito",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
-  {key:"CAB2K-1099",name:"Bloqueios Picpay",status:"wishlist",mvp:"Backlog",start:"2025-09-17",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAB2K-1088",name:"Cart\u00f5es e Limites na tela de Checkout de Pagamento Picpay",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAB2K-1086",name:"Limite CDT / FGTS",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAB2K-1081",name:"Home Cr\u00e9dito",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAB2K-1075",name:"Banners e Alertas",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAB2K-1070",name:"Underage",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAB2K-1063",name:"Tombamento de Clientes",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAB2K-960",name:"Arquivos de Interface AMC001/AMC002 - B2K",status:"wishlist",mvp:"Backlog",start:"2025-07-29",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2091",name:"[MVP5] - Informacional - Regulat\u00f3rio - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2090",name:"[MVP5] - Informacional - Pagamento - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2089",name:"[MVP5] - Informacional - Faturas - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2088",name:"[MVP5] - Informacional - Limites - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2087",name:"[MVP6] - Regulat\u00f3rio - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2086",name:"[MVP5] - Informacional - Cobran\u00e7a - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2085",name:"[MVP5] - Informacional - Autorizadores - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2084",name:"[MVP5] - Informacional - Conta - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2083",name:"[MVP5] - Informacional - B2K - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2082",name:"[MVP5] - Informacional - Faturas - P3",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2081",name:"[MVP4] - Informacional - Cobran\u00e7a - P3",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2080",name:"[MVP4] - Informacional - B2K - P3",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2079",name:"[MVP4] - Informacional - Autorizadores - P3",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2078",name:"[MVP4] - Informacional - Conta - P3",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2077",name:"[MVP4] - Concilia\u00e7\u00e3o - P2",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2076",name:"[MVP4] - Cont\u00e1bil - P2",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2075",name:"[MVP4] - Regulat\u00f3rio - P2",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2074",name:"[MVP4] - Descontinuar - P1",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2073",name:"[MVP4] - Concilia\u00e7\u00e3o - P1",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2072",name:"[MVP4] - Informacional - Cobran\u00e7a - P1",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2071",name:"[MVP4] - Cont\u00e1bil - P1",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAC-2070",name:"[MVP4] - Regulat\u00f3rio - P1",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1086",name:"[MVP5] - Limites Cross (CDT / FGTS / ON-US)",status:"wishlist",mvp:"Backlog",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1070",name:"[Externo] - Conta D\u00e9bito - Underage + FOPAG",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
+  {key:"CAB2K-1063",name:"[MVP6] - Tombamento de Clientes",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
+  {key:"CAB2K-960",name:"[MVP5] - Arquivos de Interface AMC001/AMC002",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
 ];
+
+
+
+
+
+
 
 
 
