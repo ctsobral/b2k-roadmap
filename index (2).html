@@ -1,20 +1,21 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>B2K Roadmap BUCS-345 v2026-04-08</title>
+<title>B2K Roadmap BUCS-345 v2026-04-16</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0A0E1A;--bg2:#0D1220;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.14);
+  --bg:#12172B;--bg2:#1A2035;--border:rgba(255,255,255,0.09);--border2:rgba(255,255,255,0.18);
   --text:#F0F0F5;--muted:#8B8FA3;--dim:#3D4160;
   --done:#21C25E;--build:#3B82F6;--pri:#F59E0B;--disc:#A855F7;--wish:#64748B;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
-nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:44px;display:flex;align-items:center;padding:0 16px;gap:6px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(18,23,43,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:44px;display:flex;align-items:center;padding:0 16px;gap:6px;}
 .nbrand{font-weight:800;font-size:14px;color:var(--text);margin-right:8px;}.nbrand span{color:#21C25E;}
 .nsep{width:1px;height:20px;background:var(--border);flex-shrink:0;}
 .nright{margin-left:auto;font-size:11px;color:var(--muted)}.nright b{color:#21C25E;}
@@ -25,7 +26,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
 .sf-pri{background:rgba(245,158,11,.15);border-color:rgba(245,158,11,.4);color:#F59E0B;}
 .sf-disc{background:rgba(168,85,247,.15);border-color:rgba(168,85,247,.4);color:#A855F7;}
 .sf-wish{background:rgba(100,116,139,.15);border-color:rgba(100,116,139,.4);color:#94A3B8;}
-.qbar{position:fixed;top:44px;left:0;right:0;z-index:290;background:rgba(10,14,26,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 16px;display:flex;align-items:center;gap:5px;height:44px;overflow-x:auto;}
+.qbar{position:fixed;top:44px;left:0;right:0;z-index:290;background:rgba(18,23,43,.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 16px;display:flex;align-items:center;gap:5px;height:44px;overflow-x:auto;}
 .qbar::-webkit-scrollbar{height:3px;}.qbar::-webkit-scrollbar-thumb{background:var(--dim);border-radius:10px;}
 .qb{flex-shrink:0;padding:5px 14px;border-radius:9px;font-size:12px;font-weight:700;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;}
 .qb:hover{background:rgba(255,255,255,.04);border-color:var(--border2);color:var(--text);}
@@ -37,40 +38,40 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
 .qb[data-q="Q4 2026"].sel{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.4);color:#EF4444;}
 .qb[data-q="Backlog"].sel{background:rgba(100,116,139,.12);border-color:rgba(100,116,139,.4);color:#94A3B8;}
 .qcnt{font-size:10px;padding:2px 6px;border-radius:100px;font-weight:700;}
-.sbar{max-width:100%;margin:0;padding:92px 16px 8px;display:flex;gap:8px;flex-wrap:nowrap;}
+.sbar{max-width:100%;margin:0;padding:90px 16px 6px;display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;}
 .sc{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:8px 14px;flex:1;min-width:100px;cursor:pointer;transition:all .2s;}
 .sc:hover{border-color:var(--border2);}
-.sc .lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:5px;}
+.sc .lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:3px;}
 .sc .num{font-size:20px;font-weight:900;}
-.sc .sub{font-size:11px;color:var(--muted);margin-top:2px;}
-.main{max-width:100%;margin:0;padding:0 16px 40px;}
-.qtrow{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;}
+.sc .sub{font-size:10px;color:var(--muted);margin-top:1px;}
+.main{max-width:100%;margin:0;padding:0 16px 20px;}
+.qtrow{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap;}
 .qtrow h2{font-size:18px;font-weight:800;}
 .qper{font-size:12px;color:var(--muted);padding:3px 10px;border-radius:100px;background:rgba(255,255,255,.04);border:1px solid var(--border);}
-.leg{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:6px;align-items:center;}
+.leg{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:4px;align-items:center;}
 .leg-i{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--muted);}
 .leg-sw{width:20px;height:8px;border-radius:3px;}
-.gantt{display:grid;grid-template-columns:240px 1fr;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--bg2);}
+.gantt{display:grid;grid-template-columns:300px 1fr;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--bg2);align-items:start;}
 .lp{border-right:1px solid var(--border);}
-.lph{height:72px;min-height:72px;display:flex;align-items:flex-end;padding:10px 12px;border-bottom:1px solid var(--border);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);}
-.er{display:flex;align-items:flex-start;padding:5px 8px;height:52px;min-height:52px;border-bottom:1px solid var(--border);gap:6px;overflow:hidden;}
+.lph{height:56px;max-height:56px;min-height:56px;display:flex;align-items:flex-end;padding:6px 10px;border-bottom:1px solid var(--border);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);box-sizing:border-box;}
+.er{display:flex;align-items:center;padding:0 8px;height:58px;max-height:58px;min-height:58px;border-bottom:1px solid var(--border);gap:6px;overflow:hidden;box-sizing:border-box;}
 .er:hover{background:rgba(255,255,255,.025);}
 .er-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:4px;}
-.er-key{font-size:10px;color:var(--dim);flex-shrink:0;width:82px;text-decoration:none;font-family:monospace;transition:color .15s;margin-top:1px;display:block;}
+.er-key{font-size:10px;color:var(--dim);flex-shrink:0;width:72px;text-decoration:none;font-family:monospace;transition:color .15s;margin-top:1px;display:block;overflow:hidden;text-overflow:ellipsis;}
 .er-key:hover{color:#21C25E;}
-.er-info{flex:1;min-width:0;}
-.er-name{font-size:11px;color:var(--text);line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
-.er-dates{font-size:9.5px;color:#4A5170;margin-top:3px;letter-spacing:.01em;}
+.er-info{flex:1;min-width:0;overflow:hidden;}
+.er-name{font-size:11px;color:var(--text);line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.er-dates{font-size:9px;color:#4A5170;margin-top:2px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 .rp{overflow-x:auto;}.rp::-webkit-scrollbar{height:4px;}.rp::-webkit-scrollbar-thumb{background:var(--dim);border-radius:10px;}
 .gi{position:relative;min-width:600px;}
-.ghq{position:relative;height:36px;border-bottom:1px solid var(--border);background:var(--bg2);}
-.ghm{position:relative;height:36px;border-bottom:1px solid var(--border);background:var(--bg2);}
-.ghqc{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;border-right:1px solid var(--border);flex-shrink:0;}
-.ghmc{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-right:1px solid var(--border);flex-shrink:0;}
-.gr{position:relative;height:52px;min-height:52px;border-bottom:1px solid var(--border);display:flex;align-items:center;}
+.ghq{position:relative;height:28px;border-bottom:1px solid var(--border);background:var(--bg2);}
+.ghm{position:relative;height:28px;border-bottom:1px solid var(--border);background:var(--bg2);}
+.ghqc{display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;border-right:1px solid var(--border);flex-shrink:0;}
+.ghmc{display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-right:1px solid var(--border);flex-shrink:0;}
+.gr{position:relative;height:58px;max-height:58px;min-height:58px;border-bottom:1px solid var(--border);display:flex;align-items:center;box-sizing:border-box;overflow:hidden;}
 .gr:hover{background:rgba(255,255,255,.02);}
 .gc{height:100%;flex-shrink:0;border-right:1px solid rgba(255,255,255,.02);}
-.gbar{position:absolute;height:26px;border-radius:6px;top:50%;transform:translateY(-50%);display:flex;align-items:center;padding:0 7px;font-size:9.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;transition:all .2s;z-index:3;border:1px solid transparent;}
+.gbar{position:absolute;height:28px;border-radius:6px;top:50%;transform:translateY(-50%);display:flex;align-items:center;padding:0 7px;font-size:9.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;transition:all .2s;z-index:3;border:1px solid transparent;}
 .gbar:hover{filter:brightness(1.2);transform:translateY(-50%) scaleY(1.08);z-index:20;}
 .gb-done{background:rgba(33,194,94,.22);border-color:rgba(33,194,94,.5);color:#4ADE80;}
 .gb-build{background:rgba(59,130,246,.22);border-color:rgba(59,130,246,.5);color:#60A5FA;}
@@ -94,6 +95,161 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
 .tt-lbl{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#63B3ED;min-width:78px;padding-top:1px;}
 .tt-val{color:var(--text);font-weight:500;}
 .tt-desc{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.5;border-top:1px solid var(--border);padding-top:8px;}
+
+/* Gantt unificado — uma única tabela */
+.gantt-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px;background:var(--bg2);}
+.gantt-wrap::-webkit-scrollbar{height:4px;}
+.gantt-wrap::-webkit-scrollbar-thumb{background:var(--dim);border-radius:10px;}
+.gantt-table{border-collapse:collapse;width:100%;min-width:900px;}
+.gantt-table tr{height:58px;}
+.gantt-table td,.gantt-table th{border-bottom:1px solid var(--border);box-sizing:border-box;padding:0;}
+.gantt-table tr:last-child td{border-bottom:none;}
+.gantt-table tr:hover td{background:rgba(255,255,255,.02);}
+/* Coluna fixa esquerda */
+.g-left{width:300px;min-width:300px;max-width:300px;padding:0 8px;vertical-align:middle;position:sticky;left:0;z-index:10;background:var(--bg2);}
+.g-left-hdr{width:300px;min-width:300px;max-width:300px;padding:6px 10px;vertical-align:bottom;position:sticky;left:0;z-index:11;background:var(--bg2);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);height:56px;border-bottom:1px solid var(--border);}
+/* Coluna do gráfico */
+.g-chart{position:relative;vertical-align:middle;}
+.g-chart-hdr{vertical-align:bottom;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+.g-chart-hdr2{vertical-align:middle;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+/* Conteúdo da célula esquerda */
+.er-wrap{display:flex;align-items:center;gap:6px;height:58px;overflow:hidden;}
+.er-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.er-key{font-size:10px;color:var(--dim);flex-shrink:0;width:72px;text-decoration:none;font-family:monospace;}
+.er-key:hover{color:#21C25E;}
+.er-info{flex:1;min-width:0;overflow:hidden;}
+.er-name{font-size:11px;color:var(--text);line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.er-dates{font-size:9px;color:#4A5170;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* Célula do gráfico */
+.g-cell{position:relative;height:58px;overflow:hidden;}
+.g-bgcol{height:100%;flex-shrink:0;border-right:1px solid rgba(255,255,255,.02);position:absolute;top:0;}
+.today-l{position:absolute;top:0;bottom:0;width:1px;border-left:2px dashed rgba(255,255,255,.2);z-index:15;pointer-events:none;}
+.today-lbl{position:absolute;top:0;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:7px;font-weight:700;padding:2px 4px;border-radius:3px;white-space:nowrap;}
+
+
+/* Gantt unificado — uma única tabela */
+.gantt-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px;background:var(--bg2);}
+.gantt-wrap::-webkit-scrollbar{height:4px;}
+.gantt-wrap::-webkit-scrollbar-thumb{background:var(--dim);border-radius:10px;}
+.gantt-table{border-collapse:collapse;width:100%;min-width:900px;}
+.gantt-table tr{height:58px;}
+.gantt-table td,.gantt-table th{border-bottom:1px solid var(--border);box-sizing:border-box;padding:0;}
+.gantt-table tr:last-child td{border-bottom:none;}
+.gantt-table tr:hover td{background:rgba(255,255,255,.02);}
+/* Coluna fixa esquerda */
+.g-left{width:300px;min-width:300px;max-width:300px;padding:0 8px;vertical-align:middle;position:sticky;left:0;z-index:10;background:var(--bg2);}
+.g-left-hdr{width:300px;min-width:300px;max-width:300px;padding:6px 10px;vertical-align:bottom;position:sticky;left:0;z-index:11;background:var(--bg2);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);height:56px;border-bottom:1px solid var(--border);}
+/* Coluna do gráfico */
+.g-chart{position:relative;vertical-align:middle;}
+.g-chart-hdr{vertical-align:bottom;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+.g-chart-hdr2{vertical-align:middle;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+/* Conteúdo da célula esquerda */
+.er-wrap{display:flex;align-items:center;gap:6px;height:58px;overflow:hidden;}
+.er-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.er-key{font-size:10px;color:var(--dim);flex-shrink:0;width:72px;text-decoration:none;font-family:monospace;}
+.er-key:hover{color:#21C25E;}
+.er-info{flex:1;min-width:0;overflow:hidden;}
+.er-name{font-size:11px;color:var(--text);line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.er-dates{font-size:9px;color:#4A5170;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* Célula do gráfico */
+.g-cell{position:relative;height:58px;overflow:hidden;}
+.g-bgcol{height:100%;flex-shrink:0;border-right:1px solid rgba(255,255,255,.02);position:absolute;top:0;}
+.today-l{position:absolute;top:0;bottom:0;width:1px;border-left:2px dashed rgba(255,255,255,.2);z-index:15;pointer-events:none;}
+.today-lbl{position:absolute;top:0;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:7px;font-weight:700;padding:2px 4px;border-radius:3px;white-space:nowrap;}
+
+
+/* Gantt unificado — uma única tabela */
+.gantt-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px;background:var(--bg2);}
+.gantt-wrap::-webkit-scrollbar{height:4px;}
+.gantt-wrap::-webkit-scrollbar-thumb{background:var(--dim);border-radius:10px;}
+.gantt-table{border-collapse:collapse;width:100%;min-width:900px;}
+.gantt-table tr{height:58px;}
+.gantt-table td,.gantt-table th{border-bottom:1px solid var(--border);box-sizing:border-box;padding:0;}
+.gantt-table tr:last-child td{border-bottom:none;}
+.gantt-table tr:hover td{background:rgba(255,255,255,.02);}
+/* Coluna fixa esquerda */
+.g-left{width:300px;min-width:300px;max-width:300px;padding:0 8px;vertical-align:middle;position:sticky;left:0;z-index:10;background:var(--bg2);}
+.g-left-hdr{width:300px;min-width:300px;max-width:300px;padding:6px 10px;vertical-align:bottom;position:sticky;left:0;z-index:11;background:var(--bg2);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);height:56px;border-bottom:1px solid var(--border);}
+/* Coluna do gráfico */
+.g-chart{position:relative;vertical-align:middle;}
+.g-chart-hdr{vertical-align:bottom;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+.g-chart-hdr2{vertical-align:middle;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+/* Conteúdo da célula esquerda */
+.er-wrap{display:flex;align-items:center;gap:6px;height:58px;overflow:hidden;}
+.er-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.er-key{font-size:10px;color:var(--dim);flex-shrink:0;width:72px;text-decoration:none;font-family:monospace;}
+.er-key:hover{color:#21C25E;}
+.er-info{flex:1;min-width:0;overflow:hidden;}
+.er-name{font-size:11px;color:var(--text);line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.er-dates{font-size:9px;color:#4A5170;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* Célula do gráfico */
+.g-cell{position:relative;height:58px;overflow:hidden;}
+.g-bgcol{height:100%;flex-shrink:0;border-right:1px solid rgba(255,255,255,.02);position:absolute;top:0;}
+.today-l{position:absolute;top:0;bottom:0;width:1px;border-left:2px dashed rgba(255,255,255,.2);z-index:15;pointer-events:none;}
+.today-lbl{position:absolute;top:0;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:7px;font-weight:700;padding:2px 4px;border-radius:3px;white-space:nowrap;}
+
+
+/* Gantt unificado — uma única tabela */
+.gantt-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px;background:var(--bg2);}
+.gantt-wrap::-webkit-scrollbar{height:4px;}
+.gantt-wrap::-webkit-scrollbar-thumb{background:var(--dim);border-radius:10px;}
+.gantt-table{border-collapse:collapse;width:100%;min-width:900px;}
+.gantt-table tr{height:58px;}
+.gantt-table td,.gantt-table th{border-bottom:1px solid var(--border);box-sizing:border-box;padding:0;}
+.gantt-table tr:last-child td{border-bottom:none;}
+.gantt-table tr:hover td{background:rgba(255,255,255,.02);}
+/* Coluna fixa esquerda */
+.g-left{width:300px;min-width:300px;max-width:300px;padding:0 8px;vertical-align:middle;position:sticky;left:0;z-index:10;background:var(--bg2);}
+.g-left-hdr{width:300px;min-width:300px;max-width:300px;padding:6px 10px;vertical-align:bottom;position:sticky;left:0;z-index:11;background:var(--bg2);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);height:56px;border-bottom:1px solid var(--border);}
+/* Coluna do gráfico */
+.g-chart{position:relative;vertical-align:middle;}
+.g-chart-hdr{vertical-align:bottom;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+.g-chart-hdr2{vertical-align:middle;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+/* Conteúdo da célula esquerda */
+.er-wrap{display:flex;align-items:center;gap:6px;height:58px;overflow:hidden;}
+.er-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.er-key{font-size:10px;color:var(--dim);flex-shrink:0;width:72px;text-decoration:none;font-family:monospace;}
+.er-key:hover{color:#21C25E;}
+.er-info{flex:1;min-width:0;overflow:hidden;}
+.er-name{font-size:11px;color:var(--text);line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.er-dates{font-size:9px;color:#4A5170;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* Célula do gráfico */
+.g-cell{position:relative;height:58px;overflow:hidden;}
+.g-bgcol{height:100%;flex-shrink:0;border-right:1px solid rgba(255,255,255,.02);position:absolute;top:0;}
+.today-l{position:absolute;top:0;bottom:0;width:1px;border-left:2px dashed rgba(255,255,255,.2);z-index:15;pointer-events:none;}
+.today-lbl{position:absolute;top:0;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:7px;font-weight:700;padding:2px 4px;border-radius:3px;white-space:nowrap;}
+
+
+/* Gantt unificado — uma única tabela */
+.gantt-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px;background:var(--bg2);}
+.gantt-wrap::-webkit-scrollbar{height:4px;}
+.gantt-wrap::-webkit-scrollbar-thumb{background:var(--dim);border-radius:10px;}
+.gantt-table{border-collapse:collapse;width:100%;min-width:900px;}
+.gantt-table tr{height:58px;}
+.gantt-table td,.gantt-table th{border-bottom:1px solid var(--border);box-sizing:border-box;padding:0;}
+.gantt-table tr:last-child td{border-bottom:none;}
+.gantt-table tr:hover td{background:rgba(255,255,255,.02);}
+/* Coluna fixa esquerda */
+.g-left{width:300px;min-width:300px;max-width:300px;padding:0 8px;vertical-align:middle;position:sticky;left:0;z-index:10;background:var(--bg2);}
+.g-left-hdr{width:300px;min-width:300px;max-width:300px;padding:6px 10px;vertical-align:bottom;position:sticky;left:0;z-index:11;background:var(--bg2);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);height:56px;border-bottom:1px solid var(--border);}
+/* Coluna do gráfico */
+.g-chart{position:relative;vertical-align:middle;}
+.g-chart-hdr{vertical-align:bottom;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+.g-chart-hdr2{vertical-align:middle;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+/* Conteúdo da célula esquerda */
+.er-wrap{display:flex;align-items:center;gap:6px;height:58px;overflow:hidden;}
+.er-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.er-key{font-size:10px;color:var(--dim);flex-shrink:0;width:72px;text-decoration:none;font-family:monospace;}
+.er-key:hover{color:#21C25E;}
+.er-info{flex:1;min-width:0;overflow:hidden;}
+.er-name{font-size:11px;color:var(--text);line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.er-dates{font-size:9px;color:#4A5170;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* Célula do gráfico */
+.g-cell{position:relative;height:58px;overflow:hidden;}
+.g-bgcol{height:100%;flex-shrink:0;border-right:1px solid rgba(255,255,255,.02);position:absolute;top:0;}
+.today-l{position:absolute;top:0;bottom:0;width:1px;border-left:2px dashed rgba(255,255,255,.2);z-index:15;pointer-events:none;}
+.today-lbl{position:absolute;top:0;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:7px;font-weight:700;padding:2px 4px;border-radius:3px;white-space:nowrap;}
+
 </style>
 </head>
 <body>
@@ -106,27 +262,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
   <button class="sf sf-pri"   data-s="prioritized" onclick="togS(this)">&#x23ED; Priorizado</button>
   <button class="sf sf-disc"  data-s="discovery"   onclick="togS(this)">&#x1F50D; Discovery</button>
   <button class="sf sf-wish"  data-s="wishlist"    onclick="togS(this)">&#x1F4CB; Wishlist</button>
-  <div class="nright">Progresso: <b style="color:#21C25E">25%</b> &middot; 23/91</div>
+  <div class="nright">Progresso: <b style="color:#21C25E">24%</b> &middot; 23/96</div>
 </nav>
 
 <div class="qbar">
-  <button class="qb sel" data-q="all"     onclick="selQ(this)">&#x1F5FA; Todos <span class="qcnt" style="background:rgba(255,255,255,.08);color:var(--text)">91</span></button>
+  <button class="qb sel" data-q="all"     onclick="selQ(this)">&#x1F5FA; Todos <span class="qcnt" style="background:rgba(255,255,255,.08);color:var(--text)">96</span></button>
   <button class="qb"     data-q="Q1 2026" onclick="selQ(this)">Q1/26 <span style="font-size:9px;color:var(--muted)">Jan&ndash;Mar</span> <span class="qcnt" style="background:rgba(59,130,246,.15);color:#3B82F6">23</span></button>
-  <button class="qb"     data-q="Q2 2026" onclick="selQ(this)">Q2/26 <span style="font-size:9px;color:var(--muted)">Abr&ndash;Mai</span> <span class="qcnt" style="background:rgba(168,85,247,.15);color:#A855F7">13</span></button>
+  <button class="qb"     data-q="Q2 2026" onclick="selQ(this)">Q2/26 <span style="font-size:9px;color:var(--muted)">Abr&ndash;Jun</span> <span class="qcnt" style="background:rgba(168,85,247,.15);color:#A855F7">13</span></button>
   <button class="qb"     data-q="Q3 2026" onclick="selQ(this)">Q3/26 <span style="font-size:9px;color:var(--muted)">Jul&ndash;Set</span> <span class="qcnt" style="background:rgba(245,158,11,.15);color:#F59E0B">11</span></button>
   <button class="qb"     data-q="Q4 2026" onclick="selQ(this)">Q4/26 <span style="font-size:9px;color:var(--muted)">Out&ndash;Dez</span> <span class="qcnt" style="background:rgba(239,68,68,.15);color:#EF4444">8</span></button>
-  <button class="qb"     data-q="Backlog"  onclick="selQ(this)">&#x1F4CB; Backlog <span class="qcnt" style="background:rgba(100,116,139,.15);color:#94A3B8">25</span></button>
+  <button class="qb"     data-q="Backlog"  onclick="selQ(this)">&#x1F4CB; Backlog <span class="qcnt" style="background:rgba(100,116,139,.15);color:#94A3B8">2</span></button>
   <button class="qb" style="background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.35);color:#EF4444;cursor:default;flex-shrink:0;" title="GAPs identificados no Q2/26">
     &#x26A0; 24 GAPs
   </button>
 </div>
 
 <div class="sbar">
-  <div class="sc" onclick="selQByName('all')"><div class="lbl">Total</div><div class="num" style="color:var(--text)">91</div><div class="sub">&#233;picos</div></div>
-  <div class="sc" onclick="selQByName('all')"><div class="lbl">&#x2705; Conclu&#237;dos</div><div class="num" style="color:#21C25E">23</div><div class="sub">25% do total</div></div>
-  <div class="sc" onclick="selQByName('Q2 2026')"><div class="lbl">&#x1F3D7; Build</div><div class="num" style="color:#3B82F6">6</div><div class="sub">Q2/26</div></div>
-  <div class="sc" onclick="selQByName('Q2 2026')"><div class="lbl">&#x23ED; Priorizado</div><div class="num" style="color:#F59E0B">10</div><div class="sub">MVP4</div></div>
-  <div class="sc" onclick="selQByName('Backlog')"><div class="lbl">&#x1F4CB; Backlog</div><div class="num" style="color:#94A3B8">25</div><div class="sub">sem data limite</div></div>
+  <div class="sc" onclick="selQByName('all')"><div class="lbl">Total</div><div class="num" style="color:var(--text)">96</div><div class="sub">&#233;picos</div></div>
+  <div class="sc" onclick="selQByName('all')"><div class="lbl">&#x2705; Conclu&#237;dos</div><div class="num" style="color:#21C25E">23</div><div class="sub">24% do total</div></div>
+  <div class="sc" onclick="selQByName('Q2 2026')"><div class="lbl">&#x1F3D7; Build</div><div class="num" style="color:#3B82F6">12</div><div class="sub">Q2/26</div></div>
+  <div class="sc" onclick="selQByName('Q2 2026')"><div class="lbl">&#x23ED; Priorizado</div><div class="num" style="color:#F59E0B">9</div><div class="sub">MVP4</div></div>
+  <div class="sc" onclick="selQByName('Backlog')"><div class="lbl">&#x1F4CB; Backlog</div><div class="num" style="color:#94A3B8">2</div><div class="sub">sem data limite</div></div>
 </div>
 
 <div class="main" id="main">
@@ -164,60 +320,88 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,14,26,.97
 // start = created  |  due = duedate
 // ===================================================
 var G2 = [
-  {key:"CAB2K-1196",name:"Homologa\u00e7\u00e3o - MVP1",status:"done",mvp:"MVP1 - B2K",start:"2025-10-28",due:"2025-11-18",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-888",name:"Prepara\u00e7\u00e3o de base de Homologa\u00e7\u00e3o - Carregar Conta FIS",status:"done",mvp:"MVP1 - B2K",start:"2025-07-07",due:"2025-09-30",assignee:"",quarter:"Q1 2026"},
   {key:"CAB2K-1129",name:"Cadastramento do BIN B2K - MDES",status:"done",mvp:"MVP1 - B2K",start:"2025-09-29",due:"2025-10-31",assignee:"Vitor Marques Gaspar",quarter:"Q1 2026"},
   {key:"CAB2K-1052",name:"Criar Contas e Cart\u00f5es Piloto",status:"done",mvp:"MVP1 - B2K",start:"2025-09-30",due:"2025-10-14",assignee:"",quarter:"Q1 2026"},
-  {key:"CAB2K-888",name:"Prepara\u00e7\u00e3o de base de Homologa\u00e7\u00e3o - Carregar Conta FIS",status:"done",mvp:"MVP1 - B2K",start:"2025-07-07",due:"2025-09-30",assignee:"",quarter:"Q1 2026"},
   {key:"B2KTRA-557",name:"Uso - Autentica\u00e7\u00e3o 3DS",status:"done",mvp:"MVP1 - B2K",start:"2025-10-20",due:"2025-10-22",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-1196",name:"Homologa\u00e7\u00e3o - MVP1",status:"done",mvp:"MVP1 - B2K",start:"2025-10-28",due:"2025-11-18",assignee:"",quarter:"Q1 2026"},
+  {key:"B2KTRA-409",name:"Uso - Transa\u00e7\u00f5es + Notifica\u00e7\u00e3o D\u00e9bito",status:"done",mvp:"MVP2 - B2K",start:"2025-08-13",due:"2025-10-06",assignee:"",quarter:"Q1 2026"},
   {key:"TRFSCC-1501",name:"[MVP2] -Cria\u00e7\u00e3o de Conta B2K",status:"done",mvp:"MVP2 - B2K",start:"2025-08-18",due:"2026-02-23",assignee:"",quarter:"Q1 2026"},
-  {key:"CAB2K-1354",name:"[MVP2] Testes Produtivos",status:"done",mvp:"MVP2 - B2K",start:"2026-01-27",due:"2026-03-10",assignee:"",quarter:"Q1 2026"},
-  {key:"CAB2K-926",name:"[MVP2] Uso - 2\u00aa Via (Perda / Roubo / Extravio)  -  B2k",status:"done",mvp:"MVP2 - B2K",start:"2025-11-18",due:"2026-03-10",assignee:"",quarter:"Q1 2026"},
-  {key:"CAB2K-925",name:"[MVP2] Onboarding - Gest\u00e3o do NFC -",status:"done",mvp:"MVP2 - B2K",start:"2025-12-13",due:"2026-01-20",assignee:"",quarter:"Q1 2026"},
-  {key:"CAB2K-924",name:"Onboarding - Troca de Senha/Esqueci minha senha",status:"done",mvp:"MVP2 - B2K",start:"2025-11-04",due:"2025-12-02",assignee:"",quarter:"Q1 2026"},
-  {key:"CAB2K-921",name:"Onboarding - Desbloqueio/Ativa\u00e7\u00e3o",status:"done",mvp:"MVP2 - B2K",start:"2025-09-30",due:"2025-10-28",assignee:"",quarter:"Q1 2026"},
   {key:"CAB2K-920",name:"Uso - Home D\u00e9bito",status:"done",mvp:"MVP2 - B2K",start:"2025-09-02",due:"2025-11-18",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-921",name:"Onboarding - Desbloqueio/Ativa\u00e7\u00e3o",status:"done",mvp:"MVP2 - B2K",start:"2025-09-30",due:"2025-10-28",assignee:"",quarter:"Q1 2026"},
   {key:"CAB2K-919",name:"Onboarding - Emiss\u00e3o/Embossing de Cart\u00e3o F\u00edsico",status:"done",mvp:"MVP2 - B2K",start:"2025-09-30",due:"2025-11-14",assignee:"Vitor Marques Gaspar",quarter:"Q1 2026"},
   {key:"B2KTRA-556",name:"Uso - Saque TECBAN",status:"done",mvp:"MVP2 - B2K",start:"2025-10-06",due:"2025-11-04",assignee:"",quarter:"Q1 2026"},
-  {key:"B2KTRA-409",name:"Uso - Transa\u00e7\u00f5es + Notifica\u00e7\u00e3o D\u00e9bito",status:"done",mvp:"MVP2 - B2K",start:"2025-08-13",due:"2025-10-06",assignee:"",quarter:"Q1 2026"},
-  {key:"TRCSLS-857",name:"[B2K] Acompanhamento de Testes para Nova Arquitetura B2K",status:"done",mvp:"MVP3 - B2K",start:"2025-12-01",due:"2026-01-19",assignee:"Jean Pandolfi",quarter:"Q1 2026"},
+  {key:"CAB2K-924",name:"Onboarding - Troca de Senha/Esqueci minha senha",status:"done",mvp:"MVP2 - B2K",start:"2025-11-04",due:"2025-12-02",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-926",name:"[MVP2] Uso - 2\u00aa Via (Perda / Roubo / Extravio)  -  B2k",status:"done",mvp:"MVP2 - B2K",start:"2025-11-18",due:"2026-03-10",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-925",name:"[MVP2] Onboarding - Gest\u00e3o do NFC -",status:"done",mvp:"MVP2 - B2K",start:"2025-12-13",due:"2026-01-20",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-1354",name:"[MVP2] Testes Produtivos",status:"done",mvp:"MVP2 - B2K",start:"2026-01-27",due:"2026-03-10",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-930",name:"Dom\u00ednio de Bloqueios",status:"done",mvp:"MVP3 - B2K",start:"2025-08-18",due:"2025-09-28",assignee:"",quarter:"Q1 2026"},
   {key:"CAC-1431",name:"Analise e documenta\u00e7\u00e3o do processo de concilia\u00e7\u00e3o transacional financeira",status:"done",mvp:"MVP3 - B2K",start:"2025-09-15",due:"2025-12-23",assignee:"",quarter:"Q1 2026"},
   {key:"CAC-1361",name:"[MVP3] - Adequa\u00e7\u00e3o processos para B2K - POC 6308",status:"done",mvp:"MVP3 - B2K",start:"2025-10-06",due:"2026-04-01",assignee:"Carla Teixeira Cavalcanti",quarter:"Q1 2026"},
+  {key:"TRCSLS-857",name:"[B2K] Acompanhamento de Testes para Nova Arquitetura B2K",status:"done",mvp:"MVP3 - B2K",start:"2025-12-01",due:"2026-01-19",assignee:"Jean Pandolfi",quarter:"Q1 2026"},
   {key:"CAB2K-1258",name:"[OKR2 - Ser o Melhor] Arquitetura de Cat\u00e1logo de Bloqueio",status:"done",mvp:"MVP3 - B2K",start:"2025-12-03",due:"2026-02-03",assignee:"",quarter:"Q1 2026"},
   {key:"CAB2K-1089",name:"[ MVP3]- Push Cadastral/Bloqueio -",status:"done",mvp:"MVP3 - B2K",start:"2025-12-25",due:"2026-03-16",assignee:"",quarter:"Q1 2026"},
-  {key:"CAB2K-1078",name:"[OKR 2 - Ser o Melhor] Bloqueio Tempor\u00e1rio",status:"done",mvp:"MVP3 - B2K",start:"2026-01-20",due:"2026-03-03",assignee:"",quarter:"Q1 2026"},
   {key:"CAB2K-1061",name:"[MVP3] Altera\u00e7\u00e3o de Endere\u00e7o -",status:"done",mvp:"MVP3 - B2K",start:"2025-12-25",due:"2026-03-16",assignee:"",quarter:"Q1 2026"},
-  {key:"CAB2K-930",name:"Dom\u00ednio de Bloqueios",status:"done",mvp:"MVP3 - B2K",start:"2025-08-18",due:"2025-09-28",assignee:"",quarter:"Q1 2026"},
-  {key:"CAC-2057",name:"[MVP4] -B2K - Adequa\u00e7\u00e3o Processos -  5816",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
-  {key:"CAC-2056",name:"[MVP4] - B2K - Adequa\u00e7\u00e3o Processos - Descontinua\u00e7\u00e3o ARQConcilia\u00e7\u00e3o",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
-  {key:"CAC-2042",name:"[MVP4] - B2K - Adequa\u00e7\u00e3o Processos - 3060",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
-  {key:"CAC-1975",name:"[MVP4] Adequa\u00e7\u00e3o Processos - 3050_B2k",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
-  {key:"CAB2K-1288",name:"[MVP4] Arquivos de Pagamento B2K - Migra\u00e7\u00e3o da Gera\u00e7\u00e3o e Concilia\u00e7\u00e3o de Pagamentos",status:"build",mvp:"MVP4 - B2K",start:"2026-01-01",due:"2026-05-31",assignee:"",quarter:"Q2 2026"},
+  {key:"CAB2K-1078",name:"[OKR 2 - Ser o Melhor] Bloqueio Tempor\u00e1rio",status:"done",mvp:"MVP3 - B2K",start:"2026-01-20",due:"2026-03-03",assignee:"",quarter:"Q1 2026"},
+  {key:"CAB2K-1288",name:"[MVP4] Arquivos de Interface Monet\u00e1ria",status:"build",mvp:"MVP4 - B2K",start:"2026-01-01",due:"2026-05-31",assignee:"",quarter:"Q2 2026"},
   {key:"CAB2K-1280",name:"[MVP4] Enable Cria\u00e7\u00e3o de Conta (Cat\u00e1logo de Produtos)",status:"build",mvp:"MVP4 - B2K",start:"2026-02-03",due:"2026-05-05",assignee:"",quarter:"Q2 2026"},
-  {key:"B2KTRA-872",name:"[MVP4] Gera\u00e7\u00e3o de Fatura_B2K",status:"discovery",mvp:"MVP4 - B2K",start:"2026-04-06",due:"2026-06-26",assignee:"",quarter:"Q2 2026"},
+  {key:"CAC-2057",name:"[MVP4] -B2K - Adequa\u00e7\u00e3o Processos -  5816 (1 ARQUIVO)",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-04-24",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
+  {key:"CAC-2056",name:"[MVP4] - B2K - Adequa\u00e7\u00e3o Processos - Descontinua\u00e7\u00e3o ARQConcilia\u00e7\u00e3o",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-04-24",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
+  {key:"CAC-2042",name:"[MVP4] - B2K - Adequa\u00e7\u00e3o Processos - 3060 e DECRED (1 ARQUIVO)",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-04-24",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
+  {key:"CAC-1975",name:"[MVP4] Adequa\u00e7\u00e3o Processos - 3050_B2k (1 ARQUIVO)",status:"build",mvp:"MVP4 - B2K",start:"2026-04-01",due:"2026-04-24",assignee:"Carla Teixeira Cavalcanti",quarter:"Q2 2026"},
+  {key:"B2KTRA-872",name:"[MVP4] Gera\u00e7\u00e3o de Fatura_B2K",status:"build",mvp:"MVP4 - B2K",start:"2026-04-06",due:"2026-06-26",assignee:"",quarter:"Q2 2026"},
+  {key:"CAB2K-1432",name:"[MVP4] Atribui\u00e7\u00e3o de Limite Conta Nova",status:"build",mvp:"MVP4 - B2K",start:"2026-04-08",due:"2026-05-20",assignee:"",quarter:"Q2 2026"},
+  {key:"CAC-2070",name:"[MVP4] - Regulat\u00f3rio - P1 (2 ARQUIVOS)",status:"build",mvp:"MVP4 - B2K",start:"2026-04-09",due:"2026-05-08",assignee:"",quarter:"Q2 2026"},
+  {key:"CAC-2071",name:"[MVP4] - Cont\u00e1bil - P1 (8 ARQUIVOS)",status:"build",mvp:"MVP4 - B2K",start:"2026-04-20",due:"2026-05-15",assignee:"",quarter:"Q2 2026"},
+  {key:"CAB2K-1456",name:"[MVP4] - 5 GAPs - 1\u00aa Data",status:"build",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-05-15",assignee:"",quarter:"Q2 2026"},
+  {key:"CAC-2073",name:"[MVP4] - Concilia\u00e7\u00e3o - P1 (1 ARQUIVO)",status:"build",mvp:"MVP4 - B2K",start:"2026-05-18",due:"2026-06-05",assignee:"",quarter:"Q2 2026"},
   {key:"TRFSCC-1953",name:"[MVP4] - Cria\u00e7\u00e3o de Conta integrada com Oferta - B2K",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-04-20",due:"2026-06-30",assignee:"",quarter:"Q2 2026"},
   {key:"CAB2K-1434",name:"[MVP4] Push Transacional",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-06-30",assignee:"",quarter:"Q2 2026"},
-  {key:"CAB2K-1433",name:"[MVP4] Card de Limite na Home",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-06-01",due:"2026-06-30",assignee:"",quarter:"Q2 2026"},
-  {key:"CAB2K-1432",name:"[MVP4] Atribui\u00e7\u00e3o de Limite Conta Nova",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-06-15",assignee:"",quarter:"Q2 2026"},
   {key:"B2KTRA-901",name:"[MVP4] Autorizador de Cr\u00e9dito Off Us_B2K",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-05-18",due:"2026-06-26",assignee:"",quarter:"Q2 2026"},
+  {key:"CAB2K-1433",name:"[MVP4] Card de Limite na Home",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-06-01",due:"2026-06-30",assignee:"",quarter:"Q2 2026"},
   {key:"B2KTRA-551",name:"[MVP4] Timeline Transacional Cr\u00e9dito_ B2K",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-06-01",due:"2026-06-26",assignee:"",quarter:"Q2 2026"},
-  {key:"CAB2K-1445",name:"[MVP5] Discovery - Carteiras Digitais",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-05-01",due:"2026-06-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1468",name:"[MVP4] - 8 GAPs - Testes Produtivos",status:"wishlist",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-06-19",assignee:"",quarter:"Q2 2026"},
+  {key:"CAB2K-1465",name:"[MVP4] - 4 GAPs - 2\u00aa Data",status:"wishlist",mvp:"MVP4 - B2K",start:"2026-05-11",due:"2026-05-22",assignee:"",quarter:"Q2 2026"},
+  {key:"CAB2K-1466",name:"[MVP4] - 4 GAPs - 3\u00aa Data",status:"wishlist",mvp:"MVP4 - B2K",start:"2026-05-25",due:"2026-06-05",assignee:"",quarter:"Q2 2026"},
   {key:"B2KTRA-912",name:"[MVP 5] Discovery Cashback",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-05-29",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-911",name:"[MVP5] Discovery Microfinanciamento",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-05-15",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-910",name:"[MVP 5] Discovery Parcelados",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1445",name:"[MVP5] Discovery - Carteiras Digitais",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-05-01",due:"2026-06-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1467",name:"[MVP4] - 5 GAPs - 4\u00aa Data (GAPs MVP5)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-06-08",due:"2026-06-19",assignee:"",quarter:"Q3 2026"},
   {key:"TRFSCC-1969",name:"[MVP5] - Cria\u00e7\u00e3o de Conta -  Incluir Fallback B2K",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1458",name:"[MVP5] - Push Cadastral (Evolu\u00e7\u00e3o)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1446",name:"[MVP5] - Pagamento de Fatura",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1435",name:"[MVP5] - Recomposi\u00e7\u00e3o de Limite",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1265",name:"[MVP5] - Uso - 2\u00aa Via (Danificado)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1090",name:"[MVP5] - Integra\u00e7\u00e3o com Time de Dados",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1086",name:"[MVP5] - Limites Cross (CDT / FGTS / ON-US)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1084",name:"[MVP5] - Limite Garantido",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1083",name:"[MVP5] - Ajuste/Manuten\u00e7\u00e3o de Limite",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1071",name:"[MVP5] - Carteira Digital (Wallet)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1065",name:"[MVP5] - Cart\u00e3o Virtual",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1060",name:"[MVP6] -  Carregar JwtToken (ID_CARTAO)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-960",name:"[MVP5] - Arquivos de Interface AMC001/AMC002",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-917",name:"[MVP 5] Cashback",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-916",name:"[MVP 5]  Parcelados",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-915",name:"[MVP5]  MicroFinanciamento",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-914",name:"[MVP5] Autorizador de Cr\u00e9dito On Us_B2K",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2082",name:"[MVP5] - Informacional - Faturas - P3 (6 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-06",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2081",name:"[MVP5] - Informacional - Cobran\u00e7a - P3 (1 ARQUIVO)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-06",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2080",name:"[MVP5] - Informacional - B2K - P3 (5 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-06",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2079",name:"[MVP5] - Informacional - Autorizadores - P3 (2 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-06",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2078",name:"[MVP5] - Informacional - Conta - P3 (3 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-06",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2077",name:"[MVP5] - Concilia\u00e7\u00e3o - P2 (2 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-06",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2076",name:"[MVP5] - Cont\u00e1bil - P2",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-06",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2075",name:"[MVP5] - Regulat\u00f3rio - P2 (6 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-06",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2072",name:"[MVP5] - Informacional - Cobran\u00e7a - P2 (6 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-06",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2091",name:"[MVP6] - Informacional - Regulat\u00f3rio - P4 (2 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-10-05",due:"2026-12-18",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2090",name:"[MVP6] - Informacional - Pagamento - P4 (3 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-10-05",due:"2026-12-18",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2089",name:"[MVP6] - Informacional - Faturas - P4 (7 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-10-05",due:"2026-12-18",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2088",name:"[MVP6] - Informacional - Limites - P4 (3 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-10-05",due:"2026-12-18",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2086",name:"[MVP6] - Informacional - Cobran\u00e7a - P4 (4 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-10-05",due:"2026-12-18",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2085",name:"[MVP6] - Informacional - Autorizadores - P4 (4ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-10-05",due:"2026-12-18",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2084",name:"[MVP6] - Informacional - Conta - P4 (9 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-10-05",due:"2026-12-18",assignee:"",quarter:"Q3 2026"},
+  {key:"CAC-2083",name:"[MVP6] - Informacional - B2K - P4 (13 ARQUIVOS)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-10-05",due:"2026-12-18",assignee:"",quarter:"Q3 2026"},
   {key:"CARCN-355",name:"[Q3] Consignado - B2K",status:"wishlist",mvp:"MVP6 - B2K",start:"2025-06-24",due:"",assignee:"Mariana Alves Machado Monteiro",quarter:"Backlog"},
   {key:"CAB2K-1451",name:"[MVP6] - Recupera\u00e7\u00e3o de Credito",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
   {key:"CAB2K-1450",name:"[MVP6] - Anuidade",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
@@ -228,34 +412,27 @@ var G2 = [
   {key:"CAB2K-1080",name:"[MVP6] - Cart\u00e3o Adicional / Dependente",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
   {key:"CAB2K-1077",name:"[MVP6] - Upgrade de Variante (Produto/Subproduto)",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
   {key:"CAB2K-1066",name:"[MVP6] - Arquivo de AR (Rastreio)",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
-  {key:"CAB2K-1062",name:"[MVP6] - Reposit\u00f3rio de D\u00e9bito",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
-  {key:"CAC-2091",name:"[MVP5] - Informacional - Regulat\u00f3rio - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2090",name:"[MVP5] - Informacional - Pagamento - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2089",name:"[MVP5] - Informacional - Faturas - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2088",name:"[MVP5] - Informacional - Limites - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2087",name:"[MVP6] - Regulat\u00f3rio - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2086",name:"[MVP5] - Informacional - Cobran\u00e7a - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2085",name:"[MVP5] - Informacional - Autorizadores - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2084",name:"[MVP5] - Informacional - Conta - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2083",name:"[MVP5] - Informacional - B2K - P4",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2082",name:"[MVP5] - Informacional - Faturas - P3",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2081",name:"[MVP4] - Informacional - Cobran\u00e7a - P3",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2080",name:"[MVP4] - Informacional - B2K - P3",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2079",name:"[MVP4] - Informacional - Autorizadores - P3",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2078",name:"[MVP4] - Informacional - Conta - P3",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2077",name:"[MVP4] - Concilia\u00e7\u00e3o - P2",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2076",name:"[MVP4] - Cont\u00e1bil - P2",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2075",name:"[MVP4] - Regulat\u00f3rio - P2",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2074",name:"[MVP4] - Descontinuar - P1",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2073",name:"[MVP4] - Concilia\u00e7\u00e3o - P1",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2072",name:"[MVP4] - Informacional - Cobran\u00e7a - P1",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2071",name:"[MVP4] - Cont\u00e1bil - P1",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAC-2070",name:"[MVP4] - Regulat\u00f3rio - P1",status:"wishlist",mvp:"Backlog",start:"2026-04-08",due:"",assignee:"",quarter:"Backlog"},
-  {key:"CAB2K-1086",name:"[MVP5] - Limites Cross (CDT / FGTS / ON-US)",status:"wishlist",mvp:"Backlog",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Backlog"},
-  {key:"CAB2K-1070",name:"[Externo] - Conta D\u00e9bito - Underage + FOPAG",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
   {key:"CAB2K-1063",name:"[MVP6] - Tombamento de Clientes",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
-  {key:"CAB2K-960",name:"[MVP5] - Arquivos de Interface AMC001/AMC002",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
+  {key:"CAB2K-1062",name:"[MVP6] - Reposit\u00f3rio de D\u00e9bito",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-01",due:"2026-12-31",assignee:"",quarter:"Q4 2026"},
+  {key:"CAC-2087",name:"[MVP6] - Regulat\u00f3rio - P4 (5 ARQUIVOS)",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-05",due:"2026-12-18",assignee:"",quarter:"Q4 2026"},
+  {key:"CAB2K-1070",name:"[Externo] - Conta D\u00e9bito - Underage + FOPAG",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -291,19 +468,19 @@ var ST = {
 
 // QUARTER RANGES — start/end com margem visual
 var QR = {
-  "Q1 2026":{s:"2025-06-01",e:"2026-04-15",color:"#3B82F6",period:"Jan \u2013 Mar 2026"},
-  "Q2 2026":{s:"2025-12-15",e:"2026-07-15",color:"#A855F7",period:"Abr \u2013 Mai 2026"},
+  "Q1 2026":{s:"2025-12-15",e:"2026-04-15",color:"#3B82F6",period:"Jan \u2013 Mar 2026"},
+  "Q2 2026":{s:"2026-02-15",e:"2026-07-15",color:"#A855F7",period:"Abr \u2013 Jun 2026"},
   "Q3 2026":{s:"2026-06-15",e:"2026-10-15",color:"#F59E0B",period:"Jul \u2013 Set 2026"},
-  "Q4 2026":{s:"2026-09-01",e:"2027-01-15",color:"#EF4444",period:"Out \u2013 Dez 2026"},
-  "all":    {s:"2025-06-01",e:"2027-01-15",color:"#F0F0F5",period:"Jun 2025 \u2013 Jan 2027"}
+  "Q4 2026":{s:"2026-09-15",e:"2027-01-15",color:"#EF4444",period:"Out \u2013 Dez 2026"},
+  "all":    {s:"2025-06-01",e:"2027-02-01",color:"#F0F0F5",period:"Jan 2026 \u2013 Dez 2026"}
 };
 
 // QBANDS — faixas visuais no eixo de tempo
 var QBANDS = [
   {l:"Q1/26",s:"2026-01-01",e:"2026-03-31",c:"color:#3B82F6;background:rgba(59,130,246,.06)"},
-  {l:"Q2/26",s:"2026-04-01",e:"2026-05-31",c:"color:#A855F7;background:rgba(168,85,247,.06)"},
+  {l:"Q2/26",s:"2026-04-01",e:"2026-06-30",c:"color:#A855F7;background:rgba(168,85,247,.06)"},
   {l:"Q3/26",s:"2026-07-01",e:"2026-09-30",c:"color:#F59E0B;background:rgba(245,158,11,.06)"},
-  {l:"Q4/26",s:"2026-10-01",e:"2026-12-31",c:"color:#EF4444;background:rgba(239,68,68,.06)"}
+  {l:"Q4/26",s:"2026-10-01",e:"2026-12-31",c:"color:#EF4444;background:rgba(239,68,68,.06)"},
 ];
 
 // STATE
@@ -366,155 +543,136 @@ function togS(btn){
 // ── RENDER ──────────────────────────────────────────────────────────────────
 function render(){
   var mount = document.getElementById("mount");
-
   var filtered = G2.filter(function(e){
     if(!AS[e.status]) return false;
     if(AQ==="all") return true;
-    return e.quarter === AQ;
+    return e.quarter===AQ;
   });
-
-  document.getElementById("qCnt").textContent = filtered.length + " épicos";
-
-  if(AQ === "Backlog"){
-    renderBacklog(filtered, mount);
-    return;
-  }
-
+  document.getElementById("qCnt").textContent = filtered.length+" \u00e9picos";
+  if(AQ==="Backlog"){ renderBacklog(filtered,mount); return; }
   if(!filtered.length){
-    mount.innerHTML = "<div class=\"empty\"><div style=\"font-size:36px\">&#x1F50D;</div><div style=\"font-size:14px;font-weight:600;color:var(--text)\">Nenhum épico para este filtro</div></div>";
+    mount.innerHTML="<div class=\"empty\"><div style=\"font-size:36px\">&#x1F50D;</div><div style=\"font-size:14px;font-weight:600;color:var(--text)\">Nenhum \u00e9pico para este filtro</div></div>";
     return;
   }
-
-  var qr = QR[AQ] || QR["all"];
-  var tlS = sd(qr.s);
-  var tlE = sd(qr.e);
-  var TOTAL = tlE - tlS;
-  var TDAYS = TOTAL / 86400000;
-
-  // Meses na janela
-  var months = [];
-  var mc = new Date(tlS.getFullYear(), tlS.getMonth(), 1);
-  while(mc <= tlE){ months.push(new Date(mc)); mc.setMonth(mc.getMonth()+1); }
-
+  var qr=QR[AQ]||QR["all"];
+  var tlS=sd(qr.s), tlE=sd(qr.e);
+  var TOTAL=tlE-tlS, TDAYS=TOTAL/86400000;
+  var months=[], mc=new Date(tlS.getFullYear(),tlS.getMonth(),1);
+  while(+new Date(mc)<=+tlE){ months.push(new Date(mc)); mc.setMonth(mc.getMonth()+1); }
   function mw(m){
-    var d1 = new Date(m.getFullYear(),m.getMonth(),1);
-    var d2 = new Date(m.getFullYear(),m.getMonth()+1,0);
-    var s = Math.max(+d1, +tlS);
-    var e = Math.min(+d2, +tlE);
-    return Math.max(0, (e - s) / TOTAL * 100);
+    var d1=new Date(m.getFullYear(),m.getMonth(),1);
+    var d2=new Date(m.getFullYear(),m.getMonth()+1,0);
+    var s2=Math.max(+d1,+tlS), e2=Math.min(+d2,+tlE);
+    return Math.max(0,(e2-s2)/TOTAL*100);
   }
-
-  var todayP = pct(todayStr(), tlS, TOTAL);
-
-  // Header quarters
-  var qCells = "<div style=\"position:relative;height:36px;border-bottom:1px solid var(--border);background:var(--bg2);\">"+QBANDS.map(function(qb){
-    var qs=sd(qb.s), qe=sd(qb.e);
+  var todayP=pct(todayStr(),tlS,TOTAL);
+  // Header row 1: quarters
+  var qHdr="<tr><th class=\"g-left-hdr\">\u00c9pico / Start \u2192 Limite</th>";
+  var QBANDS_CELLS=QBANDS.map(function(qb){
+    var qs=sd(qb.s),qe=sd(qb.e);
     if(+qe<+tlS||+qs>+tlE) return "";
     var l=Math.max(0,(+qs-+tlS)/TOTAL*100);
     var r=Math.min(100,(+qe-+tlS)/TOTAL*100);
     var w=(r-l).toFixed(2);
     if(w<=0) return "";
-    return "<div class=\"ghqc\" style=\"position:absolute;left:"+l.toFixed(2)+"%;width:"+w+"%;height:100%;"+qb.c+"\">"+qb.l+"</div>";
-  }).join("")+"</div>";;
-
-  // Header meses
-  var mCells = "<div style=\"position:relative;height:36px;border-bottom:1px solid var(--border);background:var(--bg2);\">" +
-    months.map(function(m){
-      var d1 = new Date(m.getFullYear(),m.getMonth(),1);
-      var lp = pct(d1.getFullYear()+"-"+String(d1.getMonth()+1).padStart(2,"0")+"-01", tlS, TOTAL);
-      var wp = mw(m);
-      var lbl = m.toLocaleDateString("pt-BR",{month:"short",year:"2-digit"}).toUpperCase();
-      return "<div style=\"position:absolute;left:"+lp.toFixed(2)+"%;width:"+wp.toFixed(2)+"%;height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-right:1px solid var(--border);\">"+lbl+"</div>";
-    }).join("") +
-    "</div>";
-
-  var lRows = [], rRows = [];
-
-  filtered.forEach(function(epic){
-    var sm = ST[epic.status] || ST.wishlist;
-
-    // START DATE e DATA LIMITE — direto do G2 (= Jira)
-    var sp = pct(epic.start, tlS, TOTAL);
-    var ep = pct(epic.due,   tlS, TOTAL);
-    var startFmt = fmtS(epic.start);
-    var dueFmt   = fmtS(epic.due);
-
-    // Painel esquerdo
-    lRows.push(
-      "<div class=\"er\">" +
-        "<div class=\"er-dot\" style=\"background:"+sm.dot+"\"></div>" +
-        "<a class=\"er-key\" href=\"https://picpay.atlassian.net/browse/"+epic.key+"\" target=\"_blank\">"+epic.key+"</a>" +
-        "<div class=\"er-info\">" +
-          "<div class=\"er-name\">"+epic.name+"</div>" +
-          "<div class=\"er-dates\">"+startFmt+" &#x2192; "+dueFmt+"</div>" +
-        "</div>" +
-      "</div>"
-    );
-
-    // Barra gantt
-    var bgCols = months.map(function(m){
-      var d1 = new Date(m.getFullYear(),m.getMonth(),1);
-      var lp = pct(d1.getFullYear()+"-"+String(d1.getMonth()+1).padStart(2,"0")+"-01", tlS, TOTAL);
-      var wp = mw(m);
-      return "<div class=\"gc\" style=\"position:absolute;left:"+lp.toFixed(2)+"%;width:"+wp.toFixed(2)+"%\"></div>";
-    }).join("");
-
-    var todayLine = (todayP!==null&&todayP>=0&&todayP<=100)
-      ? "<div class=\"today-l\" style=\"left:"+todayP.toFixed(2)+"%\"><div class=\"today-lbl\">Hoje</div></div>"
-      : "";
-
-    var bar = "";
-    if(sp!==null && ep!==null){
-      var bw = Math.max(0.5, ep-sp);
-      var lbl = bw>5 ? (epic.name.length>36 ? epic.name.slice(0,34)+"…" : epic.name) : "";
-      var ek = epic.key;
-      bar = "<div class=\"gbar "+sm.cls+"\" " +
-            "style=\"left:"+sp.toFixed(2)+"%;width:"+bw.toFixed(2)+"%\" " +
-            "onmouseenter=\"showTT(event,'"+ek+"')\" " +
-            "onmouseleave=\"hideTT()\" " +
-            "onclick=\"window.open('https://picpay.atlassian.net/browse/"+ek+"','_blank')\">"+lbl+"</div>";
+    return "<th class=\"g-chart-hdr\" colspan=\"1\" style=\"position:absolute;left:"+l.toFixed(2)+"%;width:"+w+"%;height:28px;"+qb.c+";display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;border-right:1px solid var(--border);\">"+qb.l+"</th>";
+  }).join("");
+  // Usar uma div absoluta para os quarter bands sobre a linha de meses
+  // Header row 1: quarters como div overlay
+  var qBandsHtml="<div style=\"position:absolute;top:0;left:0;right:0;height:28px;pointer-events:none;\">"+
+    QBANDS.map(function(qb){
+      var qs=sd(qb.s),qe=sd(qb.e);
+      if(+qe<+tlS||+qs>+tlE) return "";
+      var l=Math.max(0,(+qs-+tlS)/TOTAL*100);
+      var r2=Math.min(100,(+qe-+tlS)/TOTAL*100);
+      var w=(r2-l).toFixed(2);
+      if(w<=0) return "";
+      return "<div style=\"position:absolute;left:"+l.toFixed(2)+"%;width:"+w+"%;height:100%;"+qb.c+";display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;border-right:1px solid var(--border);\">"+qb.l+"</div>";
+    }).join("")+
+  "</div>";
+  // Header row 2: meses
+  var mHdr = months.map(function(m){
+    var d1str=m.getFullYear()+"-"+String(m.getMonth()+1).padStart(2,"0")+"-01";
+    var lp=pct(d1str,tlS,TOTAL);
+    var w=mw(m).toFixed(2);
+    var lbl=m.toLocaleDateString("pt-BR",{month:"short",year:"2-digit"}).toUpperCase();
+    return "<div style=\"position:absolute;left:"+lp.toFixed(2)+"%;width:"+w+"%;height:28px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-right:1px solid var(--border);box-sizing:border-box;\">"+lbl+"</div>";
+  }).join("");
+  // Linha de hoje
+  var todayHtml=(todayP!==null&&todayP>=0&&todayP<=100)
+    ?"<div class=\"today-l\" style=\"left:"+todayP.toFixed(2)+"%\"><div class=\"today-lbl\">Hoje</div></div>":
+    "";
+  // Montar tabela
+  var rows=filtered.map(function(epic){
+    var sm=ST[epic.status]||ST.wishlist;
+    var sp=pct(epic.start,tlS,TOTAL);
+    var ep=pct(epic.due,tlS,TOTAL);
+    var startFmt=fmtS(epic.start);
+    var dueFmt=fmtS(epic.due);
+    // Barra
+    var bar="";
+    if(sp!==null&&ep!==null){
+      var bw=Math.max(0.5,ep-sp);
+      var lbl=bw>4?(epic.name.length>40?epic.name.slice(0,38)+"\u2026":epic.name):"";
+      var ek=epic.key;
+      bar="<div class=\"gbar "+sm.cls+"\" style=\"left:"+sp.toFixed(2)+"%;width:"+bw.toFixed(2)+"%\" "+
+          "onmouseenter=\"showTT(event,'"+ek+"')\" onmouseleave=\"hideTT()\" "+
+          "onclick=\"window.open('https://picpay.atlassian.net/browse/"+ek+"','_blank')\">"+lbl+"</div>";
     } else if(sp!==null){
-      var ek2 = epic.key;
-      bar = "<div class=\"gbar "+sm.cls+"\" " +
-            "style=\"left:"+sp.toFixed(2)+"%;width:1.2%\" " +
-            "onmouseenter=\"showTT(event,'"+ek2+"')\" " +
-            "onmouseleave=\"hideTT()\">&#x25C6;</div>";
-    } else {
-      bar = "<div style=\"position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:9px;color:var(--dim)\">-- sem data --</div>";
+      var ek2=epic.key;
+      bar="<div class=\"gbar "+sm.cls+"\" style=\"left:"+sp.toFixed(2)+"%;width:1%\" "+
+          "onmouseenter=\"showTT(event,'"+ek2+"')\" onmouseleave=\"hideTT()\">&#x25C6;</div>";
     }
-
-    rRows.push(
-      "<div class=\"gr\">"+bgCols+bar+"</div>"
-    );
-  });
-
-  mount.innerHTML =
-    "<div class=\"gantt\">" +
-      "<div class=\"lp\">" +
-        "<div class=\"lph\">&#201;pico / Start &#x2192; Limite</div>" +
-        lRows.join("") +
-      "</div>" +
-      "<div class=\"rp\" id=\"rp\">" +
-        "<div class=\"gi\" style=\"position:relative\">" +
-          qCells +
-          mCells +
-          (todayP!==null&&todayP>=0&&todayP<=100?"<div class=\"today-global\" style=\"position:absolute;top:72px;bottom:0;left:"+todayP.toFixed(2)+"%;width:1px;border-left:2px dashed rgba(255,255,255,.25);z-index:20;pointer-events:none;\"><div style=\"position:absolute;top:0;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.1);color:rgba(255,255,255,.5);font-size:7.5px;font-weight:700;padding:2px 4px;border-radius:3px;white-space:nowrap;\">Hoje</div></div>":"") +
-          rRows.join("") +
-        "</div>" +
-      "</div>" +
+    return "<tr>"+
+      "<td class=\"g-left\">"+
+        "<div class=\"er-wrap\">"+
+          "<div class=\"er-dot\" style=\"background:"+sm.dot+"\"></div>"+
+          "<a class=\"er-key\" href=\"https://picpay.atlassian.net/browse/"+epic.key+"\" target=\"_blank\">"+epic.key+"</a>"+
+          "<div class=\"er-info\">"+
+            "<div class=\"er-name\">"+epic.name+"</div>"+
+            "<div class=\"er-dates\">"+startFmt+" &#x2192; "+dueFmt+"</div>"+
+          "</div>"+
+        "</div>"+
+      "</td>"+
+      "<td class=\"g-chart\">"+
+        "<div class=\"g-cell\" style=\"position:relative;height:58px;\">"+
+          todayHtml+bar+
+        "</div>"+
+      "</td>"+
+    "</tr>";
+  }).join("");
+  // Chart width = 100% do container menos 300px da coluna fixa
+  var chartW = "calc(100% - 300px)";
+  mount.innerHTML=
+    "<div class=\"gantt-wrap\">"+
+      "<table class=\"gantt-table\">"+
+        "<thead>"+
+          "<tr style=\"height:28px;\">"+
+            "<th class=\"g-left-hdr\" rowspan=\"2\">\u00c9pico / Start \u2192 Limite</th>"+
+            "<th style=\"padding:0;border-bottom:1px solid var(--border);height:28px;position:relative;\">"+
+              "<div style=\"position:relative;height:28px;overflow:hidden;\">"+qBandsHtml+"</div>"+
+            "</th>"+
+          "</tr>"+
+          "<tr style=\"height:28px;\">"+
+            "<th style=\"padding:0;border-bottom:1px solid var(--border);height:28px;position:relative;\">"+
+              "<div style=\"position:relative;height:28px;overflow:hidden;\">"+todayHtml+mHdr+"</div>"+
+            "</th>"+
+          "</tr>"+
+        "</thead>"+
+        "<tbody>"+rows+"</tbody>"+
+      "</table>"+
     "</div>";
-
   // Scroll para hoje
   setTimeout(function(){
-    var rp = document.getElementById("rp");
-    if(!rp) return;
-    var gw = rp.querySelector(".gi").offsetWidth;
-    if(todayP!==null&&todayP>=0&&todayP<=100)
-      rp.scrollLeft = Math.max(0, gw*todayP/100 - rp.offsetWidth/3);
-  }, 60);
+    var w=mount.querySelector(".gantt-wrap");
+    if(!w) return;
+    var tbl=w.querySelector(".gantt-table");
+    if(!tbl||todayP===null) return;
+    var chartWidth=tbl.offsetWidth-300;
+    w.scrollLeft=Math.max(0,chartWidth*todayP/100-w.offsetWidth/3);
+  },80);
 }
 
-// ── BACKLOG ─────────────────────────────────────────────────────────────────
 function renderBacklog(filtered, mount){
   if(!filtered.length){
     mount.innerHTML = "<div class=\"empty\"><div style=\"font-size:36px\">&#x1F4CB;</div><div style=\"font-size:14px;font-weight:600;color:var(--text)\">Nenhum épico no backlog</div></div>";
