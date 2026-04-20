@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>B2K Roadmap BUCS-345 v2026-04-16</title>
+<title>B2K Roadmap BUCS-345 v2026-04-20</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -250,6 +250,67 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(18,23,43,.98
 .today-l{position:absolute;top:0;bottom:0;width:1px;border-left:2px dashed rgba(255,255,255,.2);z-index:15;pointer-events:none;}
 .today-lbl{position:absolute;top:0;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:7px;font-weight:700;padding:2px 4px;border-radius:3px;white-space:nowrap;}
 
+
+.q-gap-tt{
+  position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  background:#161B2E;border:1px solid rgba(255,255,255,.18);border-radius:10px;
+  padding:12px 16px;min-width:200px;z-index:500;pointer-events:none;
+  box-shadow:0 8px 24px rgba(0,0,0,.6);opacity:0;transition:opacity .15s;
+  white-space:nowrap;
+}
+.q-gap-tt.show{opacity:1;}
+.q-gap-tt-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#8B8FA3;margin-bottom:8px;}
+.q-gap-tt-row{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:4px;}
+.q-gap-tt-row:last-child{margin-bottom:0;}
+.q-gap-tt-label{font-size:11px;color:#8B8FA3;}
+.q-gap-tt-val{font-size:15px;font-weight:800;}
+
+
+/* Gantt unificado — uma única tabela */
+.gantt-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px;background:var(--bg2);}
+.gantt-wrap::-webkit-scrollbar{height:4px;}
+.gantt-wrap::-webkit-scrollbar-thumb{background:var(--dim);border-radius:10px;}
+.gantt-table{border-collapse:collapse;width:100%;min-width:900px;}
+.gantt-table tr{height:58px;}
+.gantt-table td,.gantt-table th{border-bottom:1px solid var(--border);box-sizing:border-box;padding:0;}
+.gantt-table tr:last-child td{border-bottom:none;}
+.gantt-table tr:hover td{background:rgba(255,255,255,.02);}
+/* Coluna fixa esquerda */
+.g-left{width:300px;min-width:300px;max-width:300px;padding:0 8px;vertical-align:middle;position:sticky;left:0;z-index:10;background:var(--bg2);}
+.g-left-hdr{width:300px;min-width:300px;max-width:300px;padding:6px 10px;vertical-align:bottom;position:sticky;left:0;z-index:11;background:var(--bg2);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);height:56px;border-bottom:1px solid var(--border);}
+/* Coluna do gráfico */
+.g-chart{position:relative;vertical-align:middle;}
+.g-chart-hdr{vertical-align:bottom;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+.g-chart-hdr2{vertical-align:middle;height:28px;border-bottom:1px solid var(--border);padding:0;background:var(--bg2);}
+/* Conteúdo da célula esquerda */
+.er-wrap{display:flex;align-items:center;gap:6px;height:58px;overflow:hidden;}
+.er-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.er-key{font-size:10px;color:var(--dim);flex-shrink:0;width:72px;text-decoration:none;font-family:monospace;}
+.er-key:hover{color:#21C25E;}
+.er-info{flex:1;min-width:0;overflow:hidden;}
+.er-name{font-size:11px;color:var(--text);line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.er-dates{font-size:9px;color:#4A5170;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* Célula do gráfico */
+.g-cell{position:relative;height:58px;overflow:hidden;}
+.g-bgcol{height:100%;flex-shrink:0;border-right:1px solid rgba(255,255,255,.02);position:absolute;top:0;}
+.today-l{position:absolute;top:0;bottom:0;width:1px;border-left:2px dashed rgba(255,255,255,.2);z-index:15;pointer-events:none;}
+.today-lbl{position:absolute;top:0;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:7px;font-weight:700;padding:2px 4px;border-radius:3px;white-space:nowrap;}
+
+
+.q-gap-tt{
+  position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  background:#161B2E;border:1px solid rgba(255,255,255,.18);border-radius:10px;
+  padding:12px 16px;min-width:200px;z-index:500;pointer-events:none;
+  box-shadow:0 8px 24px rgba(0,0,0,.6);opacity:0;transition:opacity .15s;
+  white-space:nowrap;
+}
+.q-gap-tt.show{opacity:1;}
+.q-gap-tt-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#8B8FA3;margin-bottom:8px;}
+.q-gap-tt-row{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:4px;}
+.q-gap-tt-row:last-child{margin-bottom:0;}
+.q-gap-tt-label{font-size:11px;color:#8B8FA3;}
+.q-gap-tt-val{font-size:15px;font-weight:800;}
+
 </style>
 </head>
 <body>
@@ -267,20 +328,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(18,23,43,.98
 
 <div class="qbar">
   <button class="qb sel" data-q="all"     onclick="selQ(this)">&#x1F5FA; Todos <span class="qcnt" style="background:rgba(255,255,255,.08);color:var(--text)">96</span></button>
-  <button class="qb"     data-q="Q1 2026" onclick="selQ(this)">Q1/26 <span style="font-size:9px;color:var(--muted)">Jan&ndash;Mar</span> <span class="qcnt" style="background:rgba(59,130,246,.15);color:#3B82F6">23</span></button>
-  <button class="qb"     data-q="Q2 2026" onclick="selQ(this)">Q2/26 <span style="font-size:9px;color:var(--muted)">Abr&ndash;Jun</span> <span class="qcnt" style="background:rgba(168,85,247,.15);color:#A855F7">13</span></button>
-  <button class="qb"     data-q="Q3 2026" onclick="selQ(this)">Q3/26 <span style="font-size:9px;color:var(--muted)">Jul&ndash;Set</span> <span class="qcnt" style="background:rgba(245,158,11,.15);color:#F59E0B">11</span></button>
-  <button class="qb"     data-q="Q4 2026" onclick="selQ(this)">Q4/26 <span style="font-size:9px;color:var(--muted)">Out&ndash;Dez</span> <span class="qcnt" style="background:rgba(239,68,68,.15);color:#EF4444">8</span></button>
+  <button class="qb" data-q="Q1 2026" onclick="selQ(this)" onmouseenter="showGapTT('Q12026')" onmouseleave="hideGapTT('Q12026')" style="position:relative;">Q1/26 <span style="font-size:9px;color:var(--muted)">Jan&ndash;Mar</span> <span class="qcnt" style="background:rgba(59,130,246,.18);color:#3B82F6;">23</span><span class="qcnt" style="background:rgba(239,68,68,.15);color:#EF4444;border:1px solid rgba(239,68,68,.3);margin-left:3px;">19 GAPs</span><div class="q-gap-tt" id="gaptt-Q12026"><div class="q-gap-tt-title">Jan – Mar 2026</div></button>
+  <button class="qb" data-q="Q2 2026" onclick="selQ(this)" onmouseenter="showGapTT('Q22026')" onmouseleave="hideGapTT('Q22026')" style="position:relative;">Q2/26 <span style="font-size:9px;color:var(--muted)">Abr&ndash;Jun</span> <span class="qcnt" style="background:rgba(168,85,247,.18);color:#A855F7;">13</span><span class="qcnt" style="background:rgba(239,68,68,.15);color:#EF4444;border:1px solid rgba(239,68,68,.3);margin-left:3px;">24 GAPs</span><div class="q-gap-tt" id="gaptt-Q22026"><div class="q-gap-tt-title">Abr – Jun 2026</div></button>
+  <button class="qb" data-q="Q3 2026" onclick="selQ(this)" onmouseenter="showGapTT('Q32026')" onmouseleave="hideGapTT('Q32026')" style="position:relative;">Q3/26 <span style="font-size:9px;color:var(--muted)">Jul&ndash;Set</span> <span class="qcnt" style="background:rgba(245,158,11,.18);color:#F59E0B;">11</span><span class="qcnt" style="background:rgba(239,68,68,.15);color:#EF4444;border:1px solid rgba(239,68,68,.3);margin-left:3px;">28 GAPs</span><div class="q-gap-tt" id="gaptt-Q32026"><div class="q-gap-tt-title">Jul – Set 2026</div></button>
+  <button class="qb" data-q="Q4 2026" onclick="selQ(this)" onmouseenter="showGapTT('Q42026')" onmouseleave="hideGapTT('Q42026')" style="position:relative;">Q4/26 <span style="font-size:9px;color:var(--muted)">Out&ndash;Dez</span> <span class="qcnt" style="background:rgba(239,68,68,.18);color:#EF4444;">8</span><div class="q-gap-tt" id="gaptt-Q42026"><div class="q-gap-tt-title">Out – Dez 2026</div></button>
   <button class="qb"     data-q="Backlog"  onclick="selQ(this)">&#x1F4CB; Backlog <span class="qcnt" style="background:rgba(100,116,139,.15);color:#94A3B8">2</span></button>
-  <button class="qb" style="background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.35);color:#EF4444;cursor:default;flex-shrink:0;" title="GAPs identificados no Q2/26">
-    &#x26A0; 24 GAPs
-  </button>
 </div>
 
 <div class="sbar">
   <div class="sc" onclick="selQByName('all')"><div class="lbl">Total</div><div class="num" style="color:var(--text)">96</div><div class="sub">&#233;picos</div></div>
   <div class="sc" onclick="selQByName('all')"><div class="lbl">&#x2705; Conclu&#237;dos</div><div class="num" style="color:#21C25E">23</div><div class="sub">24% do total</div></div>
-  <div class="sc" onclick="selQByName('Q2 2026')"><div class="lbl">&#x1F3D7; Build</div><div class="num" style="color:#3B82F6">12</div><div class="sub">Q2/26</div></div>
+  <div class="sc" onclick="selQByName('Q2 2026')"><div class="lbl">&#x1F3D7; Build</div><div class="num" style="color:#3B82F6">11</div><div class="sub">Q2/26</div></div>
   <div class="sc" onclick="selQByName('Q2 2026')"><div class="lbl">&#x23ED; Priorizado</div><div class="num" style="color:#F59E0B">9</div><div class="sub">MVP4</div></div>
   <div class="sc" onclick="selQByName('Backlog')"><div class="lbl">&#x1F4CB; Backlog</div><div class="num" style="color:#94A3B8">2</div><div class="sub">sem data limite</div></div>
 </div>
@@ -353,7 +411,6 @@ var G2 = [
   {key:"CAB2K-1432",name:"[MVP4] Atribui\u00e7\u00e3o de Limite Conta Nova",status:"build",mvp:"MVP4 - B2K",start:"2026-04-08",due:"2026-05-20",assignee:"",quarter:"Q2 2026"},
   {key:"CAC-2070",name:"[MVP4] - Regulat\u00f3rio - P1 (2 ARQUIVOS)",status:"build",mvp:"MVP4 - B2K",start:"2026-04-09",due:"2026-05-08",assignee:"",quarter:"Q2 2026"},
   {key:"CAC-2071",name:"[MVP4] - Cont\u00e1bil - P1 (8 ARQUIVOS)",status:"build",mvp:"MVP4 - B2K",start:"2026-04-20",due:"2026-05-15",assignee:"",quarter:"Q2 2026"},
-  {key:"CAB2K-1456",name:"[MVP4] - 5 GAPs - 1\u00aa Data",status:"build",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-05-15",assignee:"",quarter:"Q2 2026"},
   {key:"CAC-2073",name:"[MVP4] - Concilia\u00e7\u00e3o - P1 (1 ARQUIVO)",status:"build",mvp:"MVP4 - B2K",start:"2026-05-18",due:"2026-06-05",assignee:"",quarter:"Q2 2026"},
   {key:"TRFSCC-1953",name:"[MVP4] - Cria\u00e7\u00e3o de Conta integrada com Oferta - B2K",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-04-20",due:"2026-06-30",assignee:"",quarter:"Q2 2026"},
   {key:"CAB2K-1434",name:"[MVP4] Push Transacional",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-06-30",assignee:"",quarter:"Q2 2026"},
@@ -361,13 +418,14 @@ var G2 = [
   {key:"CAB2K-1433",name:"[MVP4] Card de Limite na Home",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-06-01",due:"2026-06-30",assignee:"",quarter:"Q2 2026"},
   {key:"B2KTRA-551",name:"[MVP4] Timeline Transacional Cr\u00e9dito_ B2K",status:"prioritized",mvp:"MVP4 - B2K",start:"2026-06-01",due:"2026-06-26",assignee:"",quarter:"Q2 2026"},
   {key:"CAB2K-1468",name:"[MVP4] - 8 GAPs - Testes Produtivos",status:"wishlist",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-06-19",assignee:"",quarter:"Q2 2026"},
+  {key:"CAB2K-1456",name:"[MVP4] - 5 GAPs - 1\u00aa Data",status:"wishlist",mvp:"MVP4 - B2K",start:"2026-05-04",due:"2026-05-15",assignee:"",quarter:"Q2 2026"},
   {key:"CAB2K-1465",name:"[MVP4] - 4 GAPs - 2\u00aa Data",status:"wishlist",mvp:"MVP4 - B2K",start:"2026-05-11",due:"2026-05-22",assignee:"",quarter:"Q2 2026"},
   {key:"CAB2K-1466",name:"[MVP4] - 4 GAPs - 3\u00aa Data",status:"wishlist",mvp:"MVP4 - B2K",start:"2026-05-25",due:"2026-06-05",assignee:"",quarter:"Q2 2026"},
+  {key:"CAB2K-1467",name:"[MVP4] - 5 GAPs - 4\u00aa Data (GAPs MVP5)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-06-08",due:"2026-06-19",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-912",name:"[MVP 5] Discovery Cashback",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-05-29",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-911",name:"[MVP5] Discovery Microfinanciamento",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-05-15",assignee:"",quarter:"Q3 2026"},
   {key:"B2KTRA-910",name:"[MVP 5] Discovery Parcelados",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-04-01",due:"2026-06-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1445",name:"[MVP5] Discovery - Carteiras Digitais",status:"prioritized",mvp:"MVP5 - B2K",start:"2026-05-01",due:"2026-06-30",assignee:"",quarter:"Q3 2026"},
-  {key:"CAB2K-1467",name:"[MVP4] - 5 GAPs - 4\u00aa Data (GAPs MVP5)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-06-08",due:"2026-06-19",assignee:"",quarter:"Q3 2026"},
   {key:"TRFSCC-1969",name:"[MVP5] - Cria\u00e7\u00e3o de Conta -  Incluir Fallback B2K",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1458",name:"[MVP5] - Push Cadastral (Evolu\u00e7\u00e3o)",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
   {key:"CAB2K-1446",name:"[MVP5] - Pagamento de Fatura",status:"wishlist",mvp:"MVP5 - B2K",start:"2026-07-01",due:"2026-09-30",assignee:"",quarter:"Q3 2026"},
@@ -417,6 +475,10 @@ var G2 = [
   {key:"CAC-2087",name:"[MVP6] - Regulat\u00f3rio - P4 (5 ARQUIVOS)",status:"wishlist",mvp:"MVP6 - B2K",start:"2026-10-05",due:"2026-12-18",assignee:"",quarter:"Q4 2026"},
   {key:"CAB2K-1070",name:"[Externo] - Conta D\u00e9bito - Underage + FOPAG",status:"wishlist",mvp:"Backlog",start:"2025-09-12",due:"",assignee:"",quarter:"Backlog"},
 ];
+
+
+
+
 
 
 
@@ -736,6 +798,26 @@ function posT(evt){
 document.addEventListener("mousemove",function(e){
   if(TT.classList.contains("show")) posT(e);
 });
+
+
+function showGapTT(id) {
+  var el = document.getElementById('gaptt-' + id);
+  if (el) el.classList.add('show');
+}
+function hideGapTT(id) {
+  var el = document.getElementById('gaptt-' + id);
+  if (el) el.classList.remove('show');
+}
+
+
+function showGapTT(id) {
+  var el = document.getElementById('gaptt-' + id);
+  if (el) el.classList.add('show');
+}
+function hideGapTT(id) {
+  var el = document.getElementById('gaptt-' + id);
+  if (el) el.classList.remove('show');
+}
 
 // INIT
 render();
